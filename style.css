@@ -5,4 +5,12 @@ body {
 }
 body p {
   font-weight: bold;
+}
+body #wastePyramid {
+  width: 500px;
+  height: 500px;
+}
+body img {
+  width: 500px;
+  height: 300px;
 }/*# sourceMappingURL=style.css.map */
