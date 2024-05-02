@@ -1,6 +1,14 @@
-$sky: lightblue;
-$darkestDeep: black;
+$sky: rgb(173,216,230);
+$darkestDeep: rgb(0,0,0);
+$white: #FFFFFF;
 
 body{
-    background-color: linear-gradient($sky, $darkestDeep);
+    background: linear-gradient($sky, $darkestDeep);
+    font-family: Arial, Helvetica, sans-serif;
+    color: $white;
+    
+    p{
+        font-size: ;
+    }
 }
+    
