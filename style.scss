@@ -1,0 +1,28 @@
+$sky: rgb(139, 212, 236);
+$darkestDeep: rgb(0,0,0);
+$white: #FFFFFF;
+
+body{
+    background: linear-gradient($sky, $darkestDeep);
+    font-family: Arial, Helvetica, sans-serif;
+    color: $white;
+    
+    p{
+        font-weight: bold;
+    }
+
+    #wastePyramid{
+        width: 500px;
+        height: 500px;
+    }
+
+    img{
+        width: 500px;
+        height: 300px;
+    }
+}
+
+@media screen {
+    
+}
+    
