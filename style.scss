@@ -2,6 +2,10 @@ $sky: rgb(139, 212, 236);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 
+@media screen and (max-width: 600px){
+    
+}
+
 body{
     background: linear-gradient($sky, $darkestDeep);
     font-family: Arial, Helvetica, sans-serif;
@@ -22,7 +26,4 @@ body{
     }
 }
 
-@media screen {
-    
-}
     
