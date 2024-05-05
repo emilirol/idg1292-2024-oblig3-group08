@@ -3,6 +3,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
 }
+body :root {
+  font-size: clamp(1rem, 0.437rem + 0.0225vw, 3.25rem);
+}
+body #heading {
+  padding: 400px 100px;
+  font-weight: bolder;
+  background: url(img/PlasticPollutionImg.jpg);
+  background-size: 100% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 body p {
   font-weight: bold;
 }
