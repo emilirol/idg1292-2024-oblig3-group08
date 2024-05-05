@@ -8,7 +8,7 @@ body :root {
 }
 body #heading {
   padding: 400px 100px;
-  font-weight: bolder;
+  font-size: x-large;
   background: url(img/PlasticPollutionImg.jpg);
   background-size: 100% 100%;
   background-clip: text;
@@ -23,6 +23,6 @@ body #wastePyramid {
   height: 500px;
 }
 body img {
-  width: 500px;
-  height: 300px;
+  width: 200px;
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */

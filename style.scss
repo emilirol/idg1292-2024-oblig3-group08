@@ -2,10 +2,6 @@ $sky: rgb(139, 212, 236);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 
-@media screen and (min-width: 600px){
-
-}
-
 body{
     background: linear-gradient($sky, $darkestDeep);
     font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +13,7 @@ body{
 
     #heading{
         padding: 400px 100px;
-        font-weight: bolder;
+        font-size: x-large;
         background: url(img/PlasticPollutionImg.jpg);
         background-size: 100% 100%;
         background-clip: text;
@@ -35,9 +31,13 @@ body{
     }
 
     img{
-        width: 500px;
-        height: 300px;
+        width: 200px;
+        height: 100px;
     }
+}
+
+@media screen and (min-width: 600px){
+
 }
 
     
