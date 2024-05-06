@@ -9,6 +9,7 @@ body :root {
 body #heading {
   padding: 400px 100px;
   font-size: x-large;
+  text-shadow: 10px 10px 20px rgb(22, 22, 129);
   background: url(img/PlasticPollutionImg.jpg);
   background-size: 100% 100%;
   background-clip: text;

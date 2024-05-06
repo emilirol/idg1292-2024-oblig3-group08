@@ -1,4 +1,5 @@
 $sky: rgb(139, 212, 236);
+$darkBlue: rgb(22, 22, 129);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 
@@ -14,6 +15,7 @@ body{
     #heading{
         padding: 400px 100px;
         font-size: x-large;
+        text-shadow: 10px 10px 20px $darkBlue;
         background: url(img/PlasticPollutionImg.jpg);
         background-size: 100% 100%;
         background-clip: text;
