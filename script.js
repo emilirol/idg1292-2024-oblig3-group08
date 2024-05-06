@@ -1,7 +1,14 @@
-const watching = document.querySelector();
+const sections = document.querySelectorAll("section")
 
-const options ={
-    root: document.querySelector()
-    rootMargin:""
-    threshold:[]
-}
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+    })
+},{
+    threshold: .5,
+})
+
+
+sections.forEach(section=> {
+    observer.observe(section)
+})
