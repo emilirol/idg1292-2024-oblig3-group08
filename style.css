@@ -34,7 +34,7 @@ body #heading {
   }
 }
 body .guy {
-  animation: walkDistance 8s forwards infinite;
+  animation: walkDistance 8s forwards infinite linear;
   transform: scaleX(-1);
 }
 body .truck {
