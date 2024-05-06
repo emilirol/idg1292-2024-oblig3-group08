@@ -25,6 +25,17 @@ body{
         color:transparent;
     }
 
+    @keyframes fadeInAndRise {
+        0% {
+            opacity: 0;
+            transform: translateY(300px); /* Adjust start position as needed */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+      }
+
     @keyframes walkDistance {
         0% {
           transform: translateX(0) scaleX(-1);
@@ -116,4 +127,36 @@ body{
 
 }
 
-    
+.bubble {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+
+  
+    // Modifier for the first bubble
+    &--one {
+        top: 30vh;
+        left: 50%;
+        animation: fadeInAndRise 4s ease-in-out forwards infinite;
+    }
+  
+    // Modifier for the second bubble
+    &--two {
+        top: 10vh;
+        left: 60%;
+        animation: fadeInAndRise 5s ease-in-out forwards infinite;
+    }
+  
+    // Modifier for the third bubble
+    &--three {
+        top: 20vh;
+        right: 20%;
+        animation: fadeInAndRise 3s ease-in-out forwards infinite;
+    }
+    &--fore{
+        top: 20vh;
+        left: 40%;
+        animation: fadeInAndRise 4s ease-in-out forwards infinite;
+    }
+
+}

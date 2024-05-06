@@ -17,6 +17,16 @@ body #heading {
   -webkit-background-clip: text;
   color: transparent;
 }
+@keyframes fadeInAndRise {
+  0% {
+    opacity: 0;
+    transform: translateY(300px); /* Adjust start position as needed */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @keyframes walkDistance {
   0% {
     transform: translateX(0) scaleX(-1);
@@ -85,4 +95,30 @@ body #wastePyramid {
 body img {
   width: 200px;
   height: 100px;
+}
+
+.bubble {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+}
+.bubble--one {
+  top: 30vh;
+  left: 50%;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+.bubble--two {
+  top: 10vh;
+  left: 60%;
+  animation: fadeInAndRise 5s ease-in-out forwards infinite;
+}
+.bubble--three {
+  top: 20vh;
+  right: 20%;
+  animation: fadeInAndRise 3s ease-in-out forwards infinite;
+}
+.bubble--fore {
+  top: 20vh;
+  left: 40%;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
 }/*# sourceMappingURL=style.css.map */
