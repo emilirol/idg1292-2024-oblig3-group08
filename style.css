@@ -17,6 +17,20 @@ body #heading {
   -webkit-background-clip: text;
   color: transparent;
 }
+body svg {
+  position: relative;
+}
+body svg__town--1 {
+  position: absolute;
+}
+body svg__town--2 {
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+}
+body svg__town--3 {
+  position: absolute;
+}
 body p {
   font-weight: bold;
 }

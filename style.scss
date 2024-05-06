@@ -23,6 +23,25 @@ body{
         -webkit-background-clip: text;
         color:transparent;
     }
+
+    svg{
+        position: relative;
+
+        &__town--1{
+            position: absolute;
+
+        }
+
+        &__town--2{
+            position: absolute;
+            left: 10px;
+            z-index: 1;
+        }
+
+        &__town--3{
+            position: absolute;
+        }
+    }
     
     p{
         font-weight: bold;
