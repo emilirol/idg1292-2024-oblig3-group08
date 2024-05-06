@@ -2,6 +2,7 @@ $sky: rgb(139, 212, 236);
 $darkBlue: rgb(22, 22, 129);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
+$yellow:#fcee21;
 
 body{
     background: linear-gradient($sky, $darkestDeep);
@@ -41,8 +42,32 @@ body{
         &__town--3{
             position: absolute;
         }
+                
     }
     
+    #haloLight{
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px solid $darkestDeep;
+        fill: $yellow;
+        background-color: $yellow;
+        animation: halo-animation 1.5s linear infinite;
+    }
+
+    @keyframes halo-animation {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7); 
+        }
+        50% {
+          box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
+        }
+        100% {
+          box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
+        }
+      }
+
     p{
         font-weight: bold;
     }
