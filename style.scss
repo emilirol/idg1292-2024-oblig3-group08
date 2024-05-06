@@ -25,6 +25,33 @@ body{
         color:transparent;
     }
 
+    @keyframes walkDistance {
+        0% {
+          transform: translateX(0) scaleX(-1);
+        }
+        100% {
+          transform: translateX(-200%) scaleX(-1);
+        }
+      }
+
+      @keyframes driveDistance{
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-200%)
+        }
+      }
+      
+      .guy {
+          animation: walkDistance 8s forwards infinite;
+          transform: scaleX(-1);
+      }
+
+      .truck {
+        animation: driveDistance 4s forwards infinite linear;
+      }
+
     svg{
         position: relative;
 
