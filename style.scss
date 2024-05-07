@@ -43,7 +43,7 @@ body{
     @keyframes fadeInAndRise {
         0% {
             opacity: 0;
-            transform: translateY(300px); /* Adjust start position as needed */
+            transform: translateY(300px);
         }
         100% {
             opacity: 1;
@@ -110,10 +110,12 @@ body{
 
     @keyframes halo-animation {
         0% {
+
           box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7); 
         }
         50% {
           box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
+
         }
         100% {
           box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
@@ -142,21 +144,21 @@ body{
     height: 100px;
 
   
-    // Modifier for the first bubble
+ 
     &--one {
         top: 30vh;
         left: 50%;
         animation: fadeInAndRise 4s ease-in-out forwards infinite;
     }
   
-    // Modifier for the second bubble
+   
     &--two {
         top: 10vh;
         left: 60%;
         animation: fadeInAndRise 5s ease-in-out forwards infinite;
     }
   
-    // Modifier for the third bubble
+
     &--three {
         top: 20vh;
         right: 20%;
@@ -169,3 +171,30 @@ body{
     }
 
 }
+
+@keyframes slideUp {
+    0%{
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+    }
+
+.trench--one {
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    top: 5vh;
+    left: 0;
+    animation: slideUp 4s linear;
+  }
+  
+  .trench--two{
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    top: 5vh;
+    right: 0;
+    animation: slideUp 4s linear;
+  }

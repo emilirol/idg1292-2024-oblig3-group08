@@ -27,7 +27,7 @@ body #heading {
 @keyframes fadeInAndRise {
   0% {
     opacity: 0;
-    transform: translateY(300px); /* Adjust start position as needed */
+    transform: translateY(300px);
   }
   100% {
     opacity: 1;
@@ -127,4 +127,30 @@ body img {
   top: 20vh;
   left: 40%;
   animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.trench--one {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 5vh;
+  left: 0;
+  animation: slideUp 4s linear;
+}
+
+.trench--two {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 5vh;
+  right: 0;
+  animation: slideUp 4s linear;
 }/*# sourceMappingURL=style.css.map */
