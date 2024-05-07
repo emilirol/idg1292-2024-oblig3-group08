@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
@@ -15,14 +16,22 @@ body .onOff__button--container .onOff__button {
   cursor: pointer;
 }
 body #heading {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #heading h1 {
+  text-align: center;
   font-size: large;
   letter-spacing: 3px;
   text-shadow: 10px 10px 20px rgb(22, 22, 129);
-  background: url(img/PlasticPollutionImg.jpg);
-  background-size: 100% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  margin-bottom: 0;
+}
+body #heading p {
+  margin-top: 0;
+  font-size: 0.7rem;
 }
 @keyframes fadeInAndRise {
   0% {
@@ -94,10 +103,6 @@ body #haloLight {
 body p {
   font-weight: bold;
 }
-body #wastePyramid {
-  width: 500px;
-  height: 500px;
-}
 body img {
   width: 200px;
   height: 100px;
@@ -153,4 +158,20 @@ body img {
   top: 5vh;
   right: 0;
   animation: slideUp 4s linear;
+  
+  .section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  opacity: 0;
+  height: 100vh;
+  transition: 120ms;
+  border: solid 10px red;
+}
+section.show {
+  opacity: 1;
+
 }/*# sourceMappingURL=style.css.map */
