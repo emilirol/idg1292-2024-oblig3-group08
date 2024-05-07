@@ -3,6 +3,8 @@ $darkBlue: rgb(22, 22, 129);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 $yellow:#fcee21;
+$onGreen: #2DC770;
+
 
 body{
     background: linear-gradient($sky, $darkestDeep);
@@ -12,6 +14,20 @@ body{
     :root{
         font-size: clamp(1rem, calc(0.437rem + 0.0225vw), 3.25rem);
     }
+ 
+    .onOff__button--container{
+        margin-top: 20px;
+
+        .onOff__button{
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+    }
+    
+
+        
 
     #heading{
         font-size: large;
@@ -23,6 +39,44 @@ body{
         -webkit-background-clip: text;
         color:transparent;
     }
+
+    @keyframes fadeInAndRise {
+        0% {
+            opacity: 0;
+            transform: translateY(300px); /* Adjust start position as needed */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+      }
+
+    @keyframes walkDistance {
+        0% {
+          transform: translateX(0) scaleX(-1);
+        }
+        100% {
+          transform: translateX(-200%) scaleX(-1);
+        }
+      }
+
+      @keyframes driveDistance{
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-200%)
+        }
+      }
+      
+      .guy {
+          animation: walkDistance 8s forwards infinite linear;
+          transform: scaleX(-1);
+      }
+
+      .truck {
+        animation: driveDistance 4s forwards infinite linear;
+      }
 
     svg{
         position: relative;
@@ -82,4 +136,36 @@ body{
 }
 
 
-    
+.bubble {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+
+  
+    // Modifier for the first bubble
+    &--one {
+        top: 30vh;
+        left: 50%;
+        animation: fadeInAndRise 4s ease-in-out forwards infinite;
+    }
+  
+    // Modifier for the second bubble
+    &--two {
+        top: 10vh;
+        left: 60%;
+        animation: fadeInAndRise 5s ease-in-out forwards infinite;
+    }
+  
+    // Modifier for the third bubble
+    &--three {
+        top: 20vh;
+        right: 20%;
+        animation: fadeInAndRise 3s ease-in-out forwards infinite;
+    }
+    &--fore{
+        top: 20vh;
+        left: 40%;
+        animation: fadeInAndRise 4s ease-in-out forwards infinite;
+    }
+
+}
