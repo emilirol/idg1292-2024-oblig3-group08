@@ -15,9 +15,8 @@ body .onOff__button--container .onOff__button {
   cursor: pointer;
 }
 body #heading {
-  padding: 400px 100px 500px;
-  font-size: x-large;
-  letter-spacing: 5px;
+  font-size: large;
+  letter-spacing: 3px;
   text-shadow: 10px 10px 20px rgb(22, 22, 129);
   background: url(img/PlasticPollutionImg.jpg);
   background-size: 100% 100%;
@@ -67,7 +66,6 @@ body svg__town--1 {
 body svg__town--2 {
   position: absolute;
   left: 10px;
-  z-index: 1;
 }
 body svg__town--3 {
   position: absolute;
@@ -84,13 +82,13 @@ body #haloLight {
 }
 @keyframes halo-animation {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7); /* Change the color to yellow */
+    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); /* Change the color to yellow */
+    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
   }
   100% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); /* Change the color to yellow */
+    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
   }
 }
 body p {
