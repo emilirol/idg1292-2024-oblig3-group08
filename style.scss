@@ -148,32 +148,42 @@ section {
         &__trashcar {
             
         }
+
+        &__trench{
+            position: absolute;
+            width: 40vw;
+            height: auto;
+            animation: slideUp 4s linear;
+            bottom: 0;
+            opacity: 0.3;
+
+            &-one{
+                left: 0;
+            }
+
+            &-two{
+                right: 0;
+              }
+
+          }
+
+          &__anglerFish{
+            position: absolute;
+            width: 20vw;
+            bottom: 10vw;
+            left: 45vw;
+          }
+
+          &__bottomPlasticBag{
+            position: absolute;
+            width: 20vw;
+            bottom:8vw;
+            left: 35vw;
+          }
+          
+         
     }
     
-    #haloLight{
-        transform: translate(-50%, -50%);
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 2px solid $darkestDeep;
-        fill: $yellow;
-        background-color: $yellow;
-        animation: halo-animation 1.5s linear infinite;
-    }
-
-    @keyframes halo-animation {
-        0% {
-
-          box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7); 
-        }
-        50% {
-          box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
-
-        }
-        100% {
-          box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
-        }
-      }
 
     p{
         font-weight: bold;
@@ -225,20 +235,3 @@ section {
     }
     }
 
-.trench--one {
-    position: absolute;
-    width: 40vw;
-    height: auto;
-    top: 5vh;
-    left: 0;
-    animation: slideUp 4s linear;
-  }
-  
-  .trench--two{
-    position: absolute;
-    width: 40vw;
-    height: auto;
-    top: 5vh;
-    right: 0;
-    animation: slideUp 4s linear;
-  }
