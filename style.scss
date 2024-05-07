@@ -3,6 +3,8 @@ $darkBlue: rgb(22, 22, 129);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 $yellow:#fcee21;
+$onGreen: #2DC770;
+
 
 body{
     background: linear-gradient($sky, $darkestDeep);
@@ -12,6 +14,29 @@ body{
     :root{
         font-size: clamp(1rem, calc(0.437rem + 0.0225vw), 3.25rem);
     }
+
+    /*#onOFF__button--container{
+
+        margin-top: 50px;
+
+        &__button--button{
+            padding: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+
+            .on{
+                background-color: $onGreen;
+                color: $white;
+            }
+    
+            .off{
+                background-color: $darkBlue;
+                color: $white;
+            }
+        }
+
+        
+    }*/
 
     #heading{
         padding: 400px 100px 500px;
