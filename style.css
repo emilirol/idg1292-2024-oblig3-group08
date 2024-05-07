@@ -104,8 +104,23 @@ body p {
   font-weight: bold;
 }
 body img {
-  width: 200px;
-  height: 100px;
+  width: 10vw;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  opacity: 0;
+  height: 100vh;
+  transition: 120ms;
+  border: solid 10px red;
+}
+section.show {
+  opacity: 1;
 }
 
 .bubble {
@@ -158,20 +173,4 @@ body img {
   top: 5vh;
   right: 0;
   animation: slideUp 4s linear;
-  
-  .section-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section {
-  opacity: 0;
-  height: 100vh;
-  transition: 120ms;
-  border: solid 10px red;
-}
-section.show {
-  opacity: 1;
-
 }/*# sourceMappingURL=style.css.map */
