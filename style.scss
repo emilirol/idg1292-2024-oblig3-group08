@@ -5,6 +5,11 @@ $white: #FFFFFF;
 $yellow:#fcee21;
 $onGreen: #2DC770;
 
+/* Remove, cap for image size for easier editing */
+img {
+    width: 5vw;
+}
+
 
 body{
     margin: 0;
@@ -113,7 +118,7 @@ section {
             &-2 {
                 left: 20vw;
             }
-            
+
             &-3{
                 left: 5vw;
             }

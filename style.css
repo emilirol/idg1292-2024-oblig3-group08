@@ -1,3 +1,8 @@
+/* Remove, cap for image size for easier editing */
+img {
+  width: 5vw;
+}
+
 body {
   margin: 0;
   background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
