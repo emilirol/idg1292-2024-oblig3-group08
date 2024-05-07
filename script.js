@@ -1,6 +1,6 @@
 function toggleAnimations() {
-    let elements = document.querySelectorAll('sections');
-    let button = document.querySelector('toggleButton');
+    let elements = document.querySelectorAll('.bubble--one, .bubble--two, .bubble--three, .bubble--fore, .guy, .truck'); //Target the animations inside the svgs
+    let button = document.querySelector('.toggleButton');
     
     // Toggle animation on/off for each animated element
     elements.forEach(function(element) {
@@ -15,8 +15,6 @@ function toggleAnimations() {
     }
 }
 
-toggleButton();
-
 function toggleButton(){
     let onOff = document.querySelector('.onOff__button');
     if (onOff.classList.contains('off')){
@@ -30,5 +28,7 @@ function toggleButton(){
         onOff.textContent = 'Animations OFF';
     }
 }
+
+toggleButton();
 
 
