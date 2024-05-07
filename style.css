@@ -2,31 +2,17 @@ body {
   background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
-  /*#onOFF__button--container{
-
-      margin-top: 50px;
-
-      &__button--button{
-          padding: 20px;
-          font-size: 1rem;
-          cursor: pointer;
-
-          .on{
-              background-color: $onGreen;
-              color: $white;
-          }
-
-          .off{
-              background-color: $darkBlue;
-              color: $white;
-          }
-      }
-
-
-  }*/
 }
 body :root {
   font-size: clamp(1rem, 0.437rem + 0.0225vw, 3.25rem);
+}
+body .onOff__button--container {
+  margin-top: 20px;
+}
+body .onOff__button--container .onOff__button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 body #heading {
   padding: 400px 100px 500px;

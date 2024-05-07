@@ -14,29 +14,20 @@ body{
     :root{
         font-size: clamp(1rem, calc(0.437rem + 0.0225vw), 3.25rem);
     }
+ 
+    .onOff__button--container{
+        margin-top: 20px;
 
-    /*#onOFF__button--container{
-
-        margin-top: 50px;
-
-        &__button--button{
-            padding: 20px;
+        .onOff__button{
+            padding: 10px 20px;
             font-size: 1rem;
             cursor: pointer;
-
-            .on{
-                background-color: $onGreen;
-                color: $white;
-            }
-    
-            .off{
-                background-color: $darkBlue;
-                color: $white;
-            }
         }
+        
+    }
+    
 
         
-    }*/
 
     #heading{
         padding: 400px 100px 500px;
