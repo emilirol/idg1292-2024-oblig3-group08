@@ -7,6 +7,14 @@ body {
 body :root {
   font-size: clamp(1rem, 0.437rem + 0.0225vw, 3.25rem);
 }
+body .onOff__button--container {
+  margin-top: 20px;
+}
+body .onOff__button--container .onOff__button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 body #heading {
   height: 50vh;
   display: flex;
@@ -24,6 +32,39 @@ body #heading h1 {
 body #heading p {
   margin-top: 0;
   font-size: 0.7rem;
+}
+@keyframes fadeInAndRise {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes walkDistance {
+  0% {
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-200%) scaleX(-1);
+  }
+}
+@keyframes driveDistance {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+body .guy {
+  animation: walkDistance 8s forwards infinite linear;
+  transform: scaleX(-1);
+}
+body .truck {
+  animation: driveDistance 4s forwards infinite linear;
 }
 body svg {
   position: relative;
@@ -63,10 +104,62 @@ body p {
   font-weight: bold;
 }
 body img {
-  width: 10vw;
+  width: 200px;
+  height: 100px;
 }
 
-.section-container {
+.bubble {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+}
+.bubble--one {
+  top: 30vh;
+  left: 50%;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+.bubble--two {
+  top: 10vh;
+  left: 60%;
+  animation: fadeInAndRise 5s ease-in-out forwards infinite;
+}
+.bubble--three {
+  top: 20vh;
+  right: 20%;
+  animation: fadeInAndRise 3s ease-in-out forwards infinite;
+}
+.bubble--fore {
+  top: 20vh;
+  left: 40%;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.trench--one {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 5vh;
+  left: 0;
+  animation: slideUp 4s linear;
+}
+
+.trench--two {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 5vh;
+  right: 0;
+  animation: slideUp 4s linear;
+  
+  .section-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,4 +173,5 @@ section {
 }
 section.show {
   opacity: 1;
+
 }/*# sourceMappingURL=style.css.map */
