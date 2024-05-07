@@ -15,6 +15,21 @@ body .onOff__button--container .onOff__button {
   font-size: 1rem;
   cursor: pointer;
 }
+body .section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section {
+  opacity: 0;
+  height: 100vh;
+  transition: 120ms;
+  border: solid 10px red;
+  position: relative;
+}
+body section.show {
+  opacity: 1;
+}
 body #heading {
   height: 50vh;
   display: flex;
@@ -66,18 +81,19 @@ body .guy {
 body .truck {
   animation: driveDistance 4s forwards infinite linear;
 }
-body svg {
-  position: relative;
-}
-body svg__town--1 {
+body .svg__town {
   position: absolute;
+  width: 20vw;
+  bottom: 0;
 }
-body svg__town--2 {
-  position: absolute;
-  left: 10px;
+body .svg__town-1 {
+  left: 35vw;
 }
-body svg__town--3 {
-  position: absolute;
+body .svg__town-2 {
+  left: 20vw;
+}
+body .svg__town-3 {
+  left: 5vw;
 }
 body #haloLight {
   transform: translate(-50%, -50%);
@@ -102,25 +118,6 @@ body #haloLight {
 }
 body p {
   font-weight: bold;
-}
-body img {
-  width: 10vw;
-}
-
-.section-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section {
-  opacity: 0;
-  height: 100vh;
-  transition: 120ms;
-  border: solid 10px red;
-}
-section.show {
-  opacity: 1;
 }
 
 .bubble {

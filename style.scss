@@ -27,9 +27,23 @@ body{
         
     }
     
-
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+section {
+    opacity: 0;
+    height: 100vh;
+    transition: 120ms;
+    border: solid 10px red;
+    position: relative;
+    &.show {
+        opacity: 1;
+    }
+}
         
-
     #heading{
         height: 50vh;
         display: flex;
@@ -87,22 +101,24 @@ body{
         animation: driveDistance 4s forwards infinite linear;
       }
 
-    svg{
-        position: relative;
-
-        &__town--1{
+    .svg{
+        &__town{
             position: absolute;
+            width: 20vw;
+            bottom: 0;
+            &-1 {
+                left: 35vw;
+            }
 
+            &-2 {
+                left: 20vw;
+            }
+            
+            &-3{
+                left: 5vw;
+            }
         }
 
-        &__town--2{
-            position: absolute;
-            left: 10px;
-        }
-
-        &__town--3{
-            position: absolute;
-        }
         
         &__jojamart {
 
@@ -122,6 +138,10 @@ body{
 
         &__jojabag {
 
+        }
+
+        &__trashcar {
+            
         }
     }
     
@@ -155,35 +175,15 @@ body{
     }
 
 
-
-    img{
-        width: 10vw;
-    }
 }
 
-.section-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-    
-section {
-    opacity: 0;
-    height: 100vh;
-    transition: 120ms;
-    border: solid 10px red;
-    &.show {
-        opacity: 1;
-    }
-}
+
 
 .bubble {
     position: fixed;
     width: 100px;
     height: 100px;
 
-  
- 
     &--one {
         top: 30vh;
         left: 50%;
