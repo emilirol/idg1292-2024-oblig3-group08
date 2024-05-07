@@ -3,6 +3,8 @@ $darkBlue: rgb(22, 22, 129);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 $yellow:#fcee21;
+$onGreen: #2DC770;
+
 
 body{
     background: linear-gradient($sky, $darkestDeep);
@@ -12,11 +14,24 @@ body{
     :root{
         font-size: clamp(1rem, calc(0.437rem + 0.0225vw), 3.25rem);
     }
+ 
+    .onOff__button--container{
+        margin-top: 20px;
+
+        .onOff__button{
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+    }
+    
+
+        
 
     #heading{
-        padding: 400px 100px 500px;
-        font-size: x-large;
-        letter-spacing: 5px;
+        font-size: large;
+        letter-spacing: 3px;
         text-shadow: 10px 10px 20px $darkBlue;
         background: url(img/PlasticPollutionImg.jpg);
         background-size: 100% 100%;
@@ -74,7 +89,6 @@ body{
         &__town--2{
             position: absolute;
             left: 10px;
-            z-index: 1;
         }
 
         &__town--3{
@@ -92,16 +106,16 @@ body{
         fill: $yellow;
         background-color: $yellow;
         animation: halo-animation 1.5s linear infinite;
-
-        
     }
 
     @keyframes halo-animation {
         0% {
-          box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
+
+          box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7); 
         }
         50% {
-          box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
+          box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
+
         }
         100% {
           box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); 
@@ -123,9 +137,6 @@ body{
     }
 }
 
-@media screen and (min-width: 600px){
-
-}
 
 .bubble {
     position: fixed;

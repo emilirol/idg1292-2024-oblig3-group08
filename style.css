@@ -6,10 +6,17 @@ body {
 body :root {
   font-size: clamp(1rem, 0.437rem + 0.0225vw, 3.25rem);
 }
+body .onOff__button--container {
+  margin-top: 20px;
+}
+body .onOff__button--container .onOff__button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
 body #heading {
-  padding: 400px 100px 500px;
-  font-size: x-large;
-  letter-spacing: 5px;
+  font-size: large;
+  letter-spacing: 3px;
   text-shadow: 10px 10px 20px rgb(22, 22, 129);
   background: url(img/PlasticPollutionImg.jpg);
   background-size: 100% 100%;
@@ -59,7 +66,6 @@ body svg__town--1 {
 body svg__town--2 {
   position: absolute;
   left: 10px;
-  z-index: 1;
 }
 body svg__town--3 {
   position: absolute;
