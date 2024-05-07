@@ -20,7 +20,7 @@ body #heading {
 @keyframes fadeInAndRise {
   0% {
     opacity: 0;
-    transform: translateY(300px); /* Adjust start position as needed */
+    transform: translateY(300px);
   }
   100% {
     opacity: 1;
@@ -76,13 +76,13 @@ body #haloLight {
 }
 @keyframes halo-animation {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7); /* Change the color to yellow */
+    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); /* Change the color to yellow */
+    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
   }
   100% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0); /* Change the color to yellow */
+    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
   }
 }
 body p {
@@ -121,4 +121,30 @@ body img {
   top: 20vh;
   left: 40%;
   animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.trench--one {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 5vh;
+  left: 0;
+  animation: slideUp 4s linear;
+}
+
+.trench--two {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 5vh;
+  right: 0;
+  animation: slideUp 4s linear;
 }/*# sourceMappingURL=style.css.map */
