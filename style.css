@@ -1,3 +1,83 @@
+@keyframes floatingCan {
+  0%, 100% {
+    transform: translateY(50%) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-40deg);
+  }
+}
+@keyframes floatingBottle {
+  0%, 100% {
+    transform: translateY(60%) rotate(20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(30deg);
+  }
+}
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes swimAnimation {
+  0% {
+    transform: translateX(1200%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+@keyframes walkDistance {
+  0% {
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-370%) scaleX(-1);
+  }
+}
+@keyframes driveDistance {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+@keyframes fadeInAndRise {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Remove, cap for image size for easier editing */
 img {
   width: 5vw;
@@ -8,6 +88,7 @@ body {
   background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
+  font-size: clamp(1rem, 0.4375rem + 0.0225vw, 3.25rem);
 }
 body .onOff__button--container {
   margin-top: 20px;
@@ -124,16 +205,6 @@ body .bubble.fore {
   top: 7vw;
   animation: fadeInAndRise 4s ease-in-out forwards infinite;
 }
-@keyframes fadeInAndRise {
-  0% {
-    opacity: 0;
-    transform: translateY(30%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 body .fish {
   position: absolute;
   width: 8vw;
@@ -174,33 +245,14 @@ body .fish.seven {
   left: 25vw;
   opacity: 0.4;
 }
-@keyframes swimAnimation {
-  0% {
-    transform: translateX(1250%);
-  }
-  100% {
-    transform: translateX(-500%);
-  }
-}
-@keyframes walkDistance {
-  0% {
-    transform: translateX(0) scaleX(-1);
-  }
-  100% {
-    transform: translateX(-370%) scaleX(-1);
-  }
-}
-@keyframes driveDistance {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
 body .guy {
   animation: walkDistance 8s forwards linear;
   transform: scaleX(-1);
+}
+body .svg__factory {
+  position: absolute;
+  width: 33vw;
+  bottom: 0;
 }
 body .svg__town {
   position: absolute;
@@ -216,6 +268,30 @@ body .svg__town-2 {
 }
 body .svg__town-3 {
   left: 32vw;
+}
+body .svg__bottle {
+  position: absolute;
+  right: 20%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingBottle 8s linear infinite;
+  opacity: 0.5;
+}
+body .svg__bottle--two {
+  position: absolute;
+  left: 10%;
+  bottom: 6vw;
+  width: 2vw;
+  animation: floatingCan 6s linear infinite;
+  opacity: 0.6;
+}
+body .svg__soda {
+  position: absolute;
+  left: 30%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingCan 5s linear infinite;
+  opacity: 0.8;
 }
 body .svg__jojamart {
   position: absolute;
@@ -251,30 +327,6 @@ body .svg__storegull {
   left: 45vw;
   width: 10vw;
 }
-body .svg__bottle {
-  position: absolute;
-  right: 20%;
-  bottom: 7vw;
-  width: 2vw;
-  animation: floatingBottle 8s linear infinite;
-  opacity: 0.5;
-}
-body .svg__bottle--two {
-  position: absolute;
-  left: 10%;
-  bottom: 6vw;
-  width: 2vw;
-  animation: floatingCan 6s linear infinite;
-  opacity: 0.6;
-}
-body .svg__soda {
-  position: absolute;
-  left: 30%;
-  bottom: 7vw;
-  width: 2vw;
-  animation: floatingCan 5s linear infinite;
-  opacity: 0.8;
-}
 body .svg__jojabag--boat {
   position: absolute;
   right: 40%;
@@ -286,6 +338,9 @@ body .svg__truck {
   position: absolute;
   bottom: 0;
   width: 30vw;
+  animation: driveDistance 8s linear;
+  animation-fill-mode: forwards;
+  right: -30vw;
 }
 body .svg__trench {
   position: absolute;
@@ -301,14 +356,6 @@ body .svg__trench-one {
 body .svg__trench-two {
   right: 0;
 }
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 body .svg__anglerFish {
   position: absolute;
   width: 20vw;
@@ -317,8 +364,8 @@ body .svg__anglerFish {
 }
 body .svg__bottomPlasticBag {
   position: absolute;
-  width: 20vw;
-  bottom: 8vw;
+  width: 30vw;
+  bottom: 15vw;
   left: 30vw;
   animation: floatingBottle 8s linear infinite;
 }
@@ -342,79 +389,8 @@ body .svg__boat {
   animation: bobbing 4s ease-in-out infinite;
   left: 30vw;
 }
-body p {
-  font-weight: bold;
-}
 
-.bubble {
-  position: absolute;
-  width: 3vw;
-  height: 3vw;
-}
-.bubble--one {
-  top: 30vh;
-  left: 50%;
-  animation: fadeInAndRise 4s ease-in-out forwards infinite;
-}
-.bubble--two {
-  top: 10vh;
-  left: 60%;
-  animation: fadeInAndRise 5s ease-in-out forwards infinite;
-}
-.bubble--three {
-  top: 20vh;
-  right: 20%;
-  animation: fadeInAndRise 3s ease-in-out forwards infinite;
-}
-.bubble--fore {
-  top: 20vh;
-  left: 40%;
-  animation: fadeInAndRise 4s ease-in-out forwards infinite;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes floatingCan {
-  0%, 100% {
-    transform: translateY(50%) rotate(-20deg);
-  }
-  50% {
-    transform: translateY(0) rotate(-40deg);
-  }
-}
-@keyframes floatingBottle {
-  0%, 100% {
-    transform: translateY(60%) rotate(20deg);
-  }
-  50% {
-    transform: translateY(0) rotate(30deg);
-  }
-}
-@keyframes bobbing {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-10px) rotate(-3deg);
-  }
-  50% {
-    transform: translateY(0) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-10px) rotate(3deg);
-  }
+.hidden {
+  overflow-y: hidden;
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
