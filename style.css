@@ -56,11 +56,11 @@ body #heading p {
 @keyframes fadeInAndRise {
   0% {
     opacity: 0;
-    transform: translateY(300px);
+    transform: translateY(30%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 }
 @keyframes walkDistance {
@@ -68,7 +68,7 @@ body #heading p {
     transform: translateX(0) scaleX(-1);
   }
   100% {
-    transform: translateX(-200%) scaleX(-1);
+    transform: translateX(-370%) scaleX(-1);
   }
 }
 @keyframes driveDistance {
@@ -80,7 +80,7 @@ body #heading p {
   }
 }
 body .guy {
-  animation: walkDistance 8s forwards infinite linear;
+  animation: walkDistance 8s forwards linear;
   transform: scaleX(-1);
 }
 body .truck {
@@ -88,17 +88,52 @@ body .truck {
 }
 body .svg__town {
   position: absolute;
-  width: 20vw;
+  width: 33vw;
   bottom: 0;
+  opacity: 90%;
 }
 body .svg__town-1 {
-  left: 35vw;
+  left: 0vw;
 }
 body .svg__town-2 {
-  left: 20vw;
+  left: 16vw;
 }
 body .svg__town-3 {
-  left: 5vw;
+  left: 32vw;
+}
+body .svg__jojamart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40vw;
+}
+body .svg__carlos {
+  position: absolute;
+  right: 9.6vw;
+  bottom: 0;
+  width: 4vw;
+}
+body .svg__jojadoor {
+  position: absolute;
+  bottom: 0;
+  right: 9.4vw;
+  width: 4.74vw;
+}
+body .svg__trashbin {
+  position: absolute;
+  bottom: 0;
+  left: 66vw;
+}
+body .svg__recyclebin {
+  position: absolute;
+  bottom: 0;
+  left: 58vw;
+}
+body .svg__storegull {
+  position: absolute;
+  top: 5vw;
+  left: 45vw;
+  width: 10vw;
 }
 body #haloLight {
   transform: translate(-50%, -50%);
