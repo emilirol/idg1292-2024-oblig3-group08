@@ -100,26 +100,31 @@ body .svg__town-2 {
 body .svg__town-3 {
   left: 5vw;
 }
-body #haloLight {
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 2px solid rgb(0, 0, 0);
-  fill: #fcee21;
-  background-color: #fcee21;
-  animation: halo-animation 1.5s linear infinite;
+body .svg__trench {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  animation: slideUp 4s linear;
+  bottom: 0;
+  opacity: 0.3;
 }
-@keyframes halo-animation {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
-  }
+body .svg__trench-one {
+  left: 0;
+}
+body .svg__trench-two {
+  right: 0;
+}
+body .svg__anglerFish {
+  position: absolute;
+  width: 20vw;
+  bottom: 10vw;
+  left: 45vw;
+}
+body .svg__bottomPlasticBag {
+  position: absolute;
+  width: 20vw;
+  bottom: 8vw;
+  left: 35vw;
 }
 body p {
   font-weight: bold;
@@ -158,21 +163,4 @@ body p {
   100% {
     transform: translateY(0);
   }
-}
-.trench--one {
-  position: absolute;
-  width: 40vw;
-  height: auto;
-  top: 5vh;
-  left: 0;
-  animation: slideUp 4s linear;
-}
-
-.trench--two {
-  position: absolute;
-  width: 40vw;
-  height: auto;
-  top: 5vh;
-  right: 0;
-  animation: slideUp 4s linear;
 }/*# sourceMappingURL=style.css.map */
