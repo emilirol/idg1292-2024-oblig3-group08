@@ -245,6 +245,7 @@ body .fish.seven {
   left: 25vw;
   opacity: 0.4;
 }
+
 body .guy {
   animation: walkDistance 8s forwards linear;
   transform: scaleX(-1);

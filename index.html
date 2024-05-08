@@ -8,20 +8,21 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-
+<!--This div holds the element for the button that turn on/off the animations.-->
+    <div class="onOff__button--container">
+        <button class="onOff__button off" onclick="toggleButton()">ANIMATIONS</button>
+    </div>  
     
-        <div class="onOff__button--container">
-            <button class="onOff__button off" onclick="toggleButton()">ANIMATIONS</button>
-        </div>  
-    
-
+<!--This heading is telling the goal for the storytelling. The "made in China" is a "fun" comment, because most of the plastic
+    produced in the world is being produced in China. -->
     <main> 
         <section id="heading">
             <h1>PLASTIC POLLUTION</h1>
-            <p><em>made in china</em></p>
+            <p><em>made in China</em></p>
         </section>
 
-
+<!--In this section we are showing a man called Carlos walking out of a shop with a plastic bag. He throws the plasticbag in a trashcan insted of a recycling 
+    bin. Even if the recycling bin is only a few meters away. -->
     <section>
             <img class="svg__town svg__town-1" src="img/Town.svg" alt="town">
             <img class="svg__town svg__town-2" src="img/Town.svg" alt="town">
@@ -153,7 +154,9 @@
     </section>
 
 
-    
+
+<!--This section shows a trash car driving away with the plasticbag to a factory that burns plastic. 
+    We have some facts about how much plastic that is being produced in the world, how many precent that is being recycled, burned or dumped on land.-->
     <section class="hidden">
             <p>Only 10% of plastic is being recycled!</p>
             <p>Only 19% is burned!</p>
@@ -166,8 +169,7 @@
 
 
 
-
-
+<!--The boat section shows a boat sailing on the sea and trash that's floating around in the sea.-->
     <section class="imageSection__boat">
         <p>Rest of the 22% is being dumped on uncontrolled heaps, burned in nature or leaks into the environment!</p>
         <img class="svg__waves" src="img/waves.svg" alt="waves on the sea">
@@ -179,7 +181,8 @@
           <img class="svg__bottle--two"src="img/heineken-bottle.svg" alt="beer-bottle">
     </section>
 
-
+<!--In this section we are showing UN's 14th goal for sustainability. The 14th goal are called Life below water and has a focus on
+    conserving and sustainably use of the oceans, seas and marine resources.  -->
     <section class="hidden"> 
         <img class="fish one" src="img/Fish.svg" alt="Fish">
         <img class="fish two" src="img/Fish.svg" alt="Fish">
@@ -200,7 +203,9 @@
     </section>
 
 
-
+<!--The last section shows the bottom of a trench on the deepest part of the ocean. Here we see a angler fish that lights up in the dark, and 
+    reveals a plastic bag. The same bag that Carlos was throwing away in the second section.-->
+    <section>
     <section class="hidden">
         <p class="infoTags plasticBag">IS THIS YOUR PLASTIC BAG?</p>
         <img class="svg__trench svg__trench-one" src="img/trench-left.svg" alt="Trench left">
@@ -208,8 +213,6 @@
         <img class="svg__bottomPlasticBag" src="img/JoJaMartPlasticBag.svg" alt="Plastic Bag">
         <img class="svg__anglerFish" src="img/AnglerFish.svg" alt="Angler Fish">
     </section>
-
-
     </main>
 </body>
 </html>
