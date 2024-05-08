@@ -9,6 +9,22 @@ We wanted to convey and tell a story about plastic pollution. We were all at the
 plastic we are throwing away and not recycling.
 The group had read about a plasticbag found all the way down at the bottom of the Marianas Trench, in the dark where no human has ever been before.  
 
+### Brainstorming notes
+We made a list over things we wanted to implement in the story.
+
+* Plastic bag and candywrapper in the bottom of Marianas Trench
+* Say something of how much trash people take with us after a visit to the store
+* How many countries that dosen't recycle
+
+* A man comes out of a store with a plastic bag. When he is done with the bag he throws it in a trash can. This is being burned and goes up in the sky and a 
+seagull hits a toxic cloud and falls down on a boat.
+* A boat that dumps trash in the ocean. Follows a plastic bag through the sea and down in the Marianas Trench.
+ 
+* Drawing in Illustrator, cartoon-ish.
+* Easy.
+* Blocky
+
+
 ### Story board
 After the brainstorming we made a storyboard of the sections we wanted to include in the story.
 The storyboard is showing the sections that our story is parted in. From the first part where Carlos, our guy, is comming out of a store with a plastic bag
