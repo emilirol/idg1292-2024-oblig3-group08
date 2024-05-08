@@ -35,5 +35,9 @@ The elements are displayed with flex and positioned with position relative and a
 ### Animations
 The elements are animated both inside the svg elements and in the css code. We are using @keyframes and SMIL animation. Our plasticbag is animated with SMIL.
 
+## Accessebility
+For a more accessible web page, the animation on the waves can be turned of with @media query in the web browser. 
+For people availeble for seasickness, turning off the animations can ease the feeling of seasickness. 
+
 
 

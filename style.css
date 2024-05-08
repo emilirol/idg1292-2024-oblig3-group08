@@ -8,6 +8,7 @@ body {
   background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
+  font-size: clamp(1rem, 0.4375rem + 0.0225vw, 3.25rem);
 }
 body .onOff__button--container {
   margin-top: 20px;
@@ -176,7 +177,7 @@ body .fish.seven {
 }
 @keyframes swimAnimation {
   0% {
-    transform: translateX(1250%);
+    transform: translateX(1200%);
   }
   100% {
     transform: translateX(-500%);
