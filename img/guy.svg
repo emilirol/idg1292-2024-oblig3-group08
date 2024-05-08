@@ -85,12 +85,12 @@
 
 #right-arm, #left-leg {
   transform-origin: center;
-  animation: walkSetOne 2s infinite;
+  animation: walkSetOne 2s linear 4;
 }
 
 #left-arm, #right-leg {
   transform-origin: center;
-  animation: walkSetTwo 2s infinite;
+  animation: walkSetTwo 2s linear 4;
 }
     </style>
   </defs>

@@ -1,3 +1,5 @@
+@use "animations.scss";
+
 $sky: rgb(139, 212, 236);
 $backgroundBlue: rgb(30, 154, 228);
 $darkBlue: rgb(22, 22, 129);
@@ -10,8 +12,6 @@ $onGreen: #2DC770;
 img {
     width: 5vw;
 }
-
-
 
 
 body{
@@ -151,16 +151,6 @@ section {
         }
     
     }
-    @keyframes fadeInAndRise {
-        0% {
-            opacity: 0;
-            transform: translateY(300px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-      }
 
     .fish{
         position: absolute;
@@ -203,87 +193,125 @@ section {
             opacity: 0.4;
         }
     }
-    @keyframes swimAnimation {
-        0%{
-            transform: translateX(1200%);
-        }
-        100%{
-            transform: translateX(-500%);
-        }
-    }
-
-    
-
-
-    @keyframes walkDistance {
-        0% {
-          transform: translateX(0) scaleX(-1);
-        }
-        100% {
-          transform: translateX(-200%) scaleX(-1);
-        }
-      }
-
-      @keyframes driveDistance{
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-200%)
-        }
-      }
       
       .guy {
-          animation: walkDistance 8s forwards infinite linear;
+          animation: walkDistance 8s forwards linear;
           transform: scaleX(-1);
       }
 
-      .truck {
-        animation: driveDistance 4s forwards infinite linear;
-      }
 
     .svg{
+      &__factory{
+        position: absolute;
+        width: 33vw;
+        bottom: 0;
+      }
+
         &__town{
             position: absolute;
-            width: 20vw;
+            width: 33vw;
             bottom: 0;
+            opacity: 90%;
             &-1 {
-                left: 35vw;
+                left: 0vw;
             }
 
             &-2 {
-                left: 20vw;
+                left: 16vw;
             }
 
             &-3{
-                left: 5vw;
+                left: 32vw;
             }
         }
 
+        &__bottle{
+          position: absolute;
+          right: 20%;
+          bottom: 7vw;
+          width: 2vw;
+          animation: floatingBottle 8s linear infinite;
+          opacity: 0.5;
+
+          &--two{
+            position: absolute;
+            left: 10%;
+            bottom: 6vw;
+            width: 2vw;
+            animation: floatingCan 6s linear infinite;
+            opacity: 0.6;
+          }
+        }
+
+        &__soda{
+          position: absolute;
+          left: 30%;
+          bottom: 7vw;
+          width: 2vw;
+          animation: floatingCan 5s linear infinite;
+          opacity: 0.8;
+        }
         
         &__jojamart {
-
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40vw;
         }
 
         &__carlos {
-
+            position: absolute;
+            right: 9.6vw;
+            bottom: 0;
+            width: 4vw;
+            
         }
 
-        &__trashcan {
+        &__jojadoor {
+            position: absolute;
+            bottom: 0;
+            right: 9.4vw;
+            width: 4.74vw;
+        }
 
+        &__trashbin {
+            position: absolute;
+            bottom: 0;
+            left: 66vw;
         }
 
         &__recyclebin {
+            position: absolute;
+            bottom: 0;
+            left: 58vw;
+        }
 
+        &__storegull {
+            position: absolute;
+            top: 5vw;
+            left: 45vw;
+            width: 10vw;
         }
 
         &__jojabag {
 
+          &--boat{
+            position: absolute;
+            right: 40%;
+            bottom: 0;
+            width: 20vw;
+            animation: fadeOut 5.5s forwards;
+          }
         }
 
-        &__trashcar {
-            
-        }
+        &__truck {
+          position: absolute;
+          bottom: 0;
+          width: 30vw;
+          animation: driveDistance 8s linear;
+          animation-fill-mode: forwards;
+          right: -30vw;
+      }
 
         &__trench{
             position: absolute;
@@ -303,14 +331,7 @@ section {
 
           }
 
-          @keyframes slideUp {
-            0%{
-              transform: translateY(100%);
-            }
-            100% {
-              transform: translateY(0);
-            }
-            }
+
 
           &__anglerFish{
             position: absolute;
@@ -322,24 +343,37 @@ section {
           &__bottomPlasticBag{
             position: absolute;
             width: 30vw;
-            bottom:6vw;
+            bottom:15vw;
             left: 30vw;
+            animation: floatingBottle 8s linear infinite;
           }
           
-         
+         &__waves{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            bottom: 2vw;
+            left: 0;
+
+            &--two{
+              position: absolute;
+              width: 100%;
+              bottom: 0;
+              left: 0;
+            } 
+         }
+         &__boat{
+          position: absolute;
+          width: 30vw;
+          bottom: 10vw;
+          animation: bobbing 4s ease-in-out infinite;
+          left: 30vw;
+         }
     }
-    
-
-    
-
 
 }
 
-
-
-
-
-
-
-
-
+.hidden{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}

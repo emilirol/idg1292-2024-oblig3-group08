@@ -68,7 +68,7 @@
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
     <path id="s-path" fill="none" stroke="transparent" d="M 50,0 C 25,50 75,50 50,100 C 25,150 75,150 50,200" />
-    <animateMotion dur="4s" repeatCount="indefinite">
+    <animateMotion dur="4s" fill="freeze">
       <mpath href="#s-path"/>
     </animateMotion>
     <g>
