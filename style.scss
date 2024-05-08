@@ -1,3 +1,5 @@
+@use "animations.scss";
+
 $sky: rgb(139, 212, 236);
 $backgroundBlue: rgb(30, 154, 228);
 $darkBlue: rgb(22, 22, 129);
@@ -10,8 +12,6 @@ $onGreen: #2DC770;
 img {
     width: 5vw;
 }
-
-
 
 
 body{
@@ -151,16 +151,6 @@ section {
         }
     
     }
-    @keyframes fadeInAndRise {
-        0% {
-            opacity: 0;
-            transform: translateY(30%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-      }
 
     .fish{
         position: absolute;
@@ -203,33 +193,6 @@ section {
             opacity: 0.4;
         }
     }
-    @keyframes swimAnimation {
-        0%{
-            transform: translateX(1200%);
-        }
-        100%{
-            transform: translateX(-500%);
-        }
-    }
-
-
-    @keyframes walkDistance {
-        0% {
-          transform: translateX(0) scaleX(-1);
-        }
-        100% {
-          transform: translateX(-370%) scaleX(-1);
-        }
-      }
-
-      @keyframes driveDistance{
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-250%)
-        }
-      }
       
       .guy {
           animation: walkDistance 8s forwards linear;
@@ -368,14 +331,7 @@ section {
 
           }
 
-          @keyframes slideUp {
-            0%{
-              transform: translateY(100%);
-            }
-            100% {
-              transform: translateY(0);
-            }
-            }
+
 
           &__anglerFish{
             position: absolute;
@@ -415,66 +371,9 @@ section {
          }
     }
 
-    
-
-
 }
-
 
 .hidden{
   overflow-y: hidden;
   overflow-x: hidden;
 }
-
-
-@keyframes fadeOut{
-  0% {
-    opacity: 1;
-  }
-    100%{
-      opacity: 0;
-    }
-}
-
-@keyframes slideUp {
-    0%{
-      transform: translateY(100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-    }
-
-
-    @keyframes floatingCan {
-      0%, 100% {
-        transform: translateY(50%) rotate(-20deg);
-      }
-      50% {
-        transform: translateY(0) rotate(-40deg);
-      }
-    }
-
-    @keyframes floatingBottle{
-      0%, 100%{
-        transform: translateY(60%) rotate(20deg);
-      }
-      50%{
-        transform: translateY(0) rotate(30deg);
-      }
-    }
-
-    @keyframes bobbing {
-        0%, 100% {
-          transform: translateY(0) rotate(0deg);
-        }
-        25% {
-          transform: translateY(-10px) rotate(-3deg);
-        }
-        50% {
-          transform: translateY(0) rotate(0deg);
-        }
-        75% {
-          transform: translateY(-10px) rotate(3deg);
-        }
-      }

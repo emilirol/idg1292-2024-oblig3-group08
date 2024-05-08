@@ -1,3 +1,83 @@
+@keyframes floatingCan {
+  0%, 100% {
+    transform: translateY(50%) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-40deg);
+  }
+}
+@keyframes floatingBottle {
+  0%, 100% {
+    transform: translateY(60%) rotate(20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(30deg);
+  }
+}
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes swimAnimation {
+  0% {
+    transform: translateX(1200%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+@keyframes walkDistance {
+  0% {
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-370%) scaleX(-1);
+  }
+}
+@keyframes driveDistance {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+@keyframes fadeInAndRise {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Remove, cap for image size for easier editing */
 img {
   width: 5vw;
@@ -125,16 +205,6 @@ body .bubble.fore {
   top: 7vw;
   animation: fadeInAndRise 4s ease-in-out forwards infinite;
 }
-@keyframes fadeInAndRise {
-  0% {
-    opacity: 0;
-    transform: translateY(30%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 body .fish {
   position: absolute;
   width: 8vw;
@@ -174,30 +244,6 @@ body .fish.seven {
   bottom: 5vw;
   left: 25vw;
   opacity: 0.4;
-}
-@keyframes swimAnimation {
-  0% {
-    transform: translateX(1200%);
-  }
-  100% {
-    transform: translateX(-500%);
-  }
-}
-@keyframes walkDistance {
-  0% {
-    transform: translateX(0) scaleX(-1);
-  }
-  100% {
-    transform: translateX(-370%) scaleX(-1);
-  }
-}
-@keyframes driveDistance {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-250%);
-  }
 }
 body .guy {
   animation: walkDistance 8s forwards linear;
@@ -310,14 +356,6 @@ body .svg__trench-one {
 body .svg__trench-two {
   right: 0;
 }
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 body .svg__anglerFish {
   position: absolute;
   width: 20vw;
@@ -355,51 +393,4 @@ body .svg__boat {
 .hidden {
   overflow-y: hidden;
   overflow-x: hidden;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes floatingCan {
-  0%, 100% {
-    transform: translateY(50%) rotate(-20deg);
-  }
-  50% {
-    transform: translateY(0) rotate(-40deg);
-  }
-}
-@keyframes floatingBottle {
-  0%, 100% {
-    transform: translateY(60%) rotate(20deg);
-  }
-  50% {
-    transform: translateY(0) rotate(30deg);
-  }
-}
-@keyframes bobbing {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-10px) rotate(-3deg);
-  }
-  50% {
-    transform: translateY(0) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-10px) rotate(3deg);
-  }
 }/*# sourceMappingURL=style.css.map */
