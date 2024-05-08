@@ -104,9 +104,6 @@ section {
           transform: scaleX(-1);
       }
 
-      .truck {
-        animation: driveDistance 4s forwards infinite linear;
-      }
 
     .svg{
         &__town{
@@ -180,9 +177,11 @@ section {
           }
         }
 
-        &__trashcar {
-            
-        }
+        &__truck {
+          position: absolute;
+          bottom: 0;
+          width: 30vw;
+      }
 
         &__trench{
             position: absolute;
@@ -214,6 +213,7 @@ section {
             width: 20vw;
             bottom:8vw;
             left: 35vw;
+            animation: floatingBottle 8s linear infinite;
           }
           
          &__waves{
