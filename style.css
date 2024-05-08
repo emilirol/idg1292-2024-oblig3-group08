@@ -36,6 +36,14 @@
     opacity: 0;
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes slideUp {
   0% {
     transform: translateY(100%);
@@ -71,11 +79,39 @@
 @keyframes fadeInAndRise {
   0% {
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(300%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(150%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+@keyframes swimDistance {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
   }
   100% {
     opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+@keyframes plasticThrow {
+  0% {
     transform: translateY(0);
+  }
+  1% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(50%) scale(0);
   }
 }
 /* Remove, cap for image size for easier editing */
@@ -141,11 +177,19 @@ body .infoTags {
   font-size: 1.5rem;
 }
 body .infoTags.plasticBag {
+  opacity: 0;
   right: 5vw;
-  top: 5vw;
+  bottom: 15vw;
+  z-index: 1;
+  animation: fadeIn 10s linear;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
 body .infoTags.goal14 {
+  opacity: 0;
   font-size: 1rem;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
 }
 body .infoTags.goal14.nr1 {
   font-size: 1.2rem;
@@ -159,69 +203,67 @@ body .infoTags.goal14.nr2 {
   padding-bottom: 1vw;
   left: 2vw;
   bottom: 2vw;
+  animation-delay: 4s;
 }
 body .infoTags.goal14.nr3 {
   top: 1vw;
   right: 2vw;
-}
-body #wastePyramid {
-  position: absolute;
-  opacity: 0.5;
-  width: 20vw;
-  bottom: 2vw;
-  left: 20vw;
+  animation-delay: 2s;
 }
 body .UNgoal14 {
   position: absolute;
   width: 5vw;
   top: 9vw;
   left: 19.5vw;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
 }
 body .bubble {
   position: absolute;
   opacity: 0.4;
 }
 body .bubble.one {
-  right: 5vw;
+  right: 20vw;
   width: 7vw;
   top: 5vw;
-  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+  animation: fadeInAndRise 6s linear forwards infinite;
 }
 body .bubble.two {
-  right: 15vw;
-  width: 5vw;
-  top: 2vw;
-  animation: fadeInAndRise 5s ease-in-out forwards infinite;
-}
-body .bubble.three {
-  right: 25vw;
-  width: 7vw;
-  top: 10vw;
-  animation: fadeInAndRise 3s ease-in-out forwards infinite;
-}
-body .bubble.fore {
   right: 35vw;
   width: 5vw;
+  top: 2vw;
+  animation: fadeInAndRise 7s linear forwards infinite;
+}
+body .bubble.three {
+  right: 40vw;
+  width: 7vw;
+  top: 10vw;
+  animation: fadeInAndRise 8s linear forwards infinite;
+}
+body .bubble.fore {
+  right: 55vw;
+  width: 5vw;
   top: 7vw;
-  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+  animation: fadeInAndRise 8s linear forwards infinite;
 }
 body .fish {
   position: absolute;
   width: 8vw;
-  animation: swimAnimation 10s forwards linear infinite;
+  animation: swimAnimation 12s forwards linear infinite;
 }
 body .fish.one {
-  top: 8vw;
+  bottom: 35vw;
   left: 30vw;
   opacity: 0.5;
 }
 body .fish.two {
-  top: 21vw;
+  bottom: 30vw;
   left: 23vw;
   opacity: 0.5;
 }
 body .fish.three {
-  top: 25vw;
+  bottom: 25vw;
   left: 15vw;
   opacity: 0.3;
 }
@@ -253,6 +295,15 @@ body .svg__factory {
   position: absolute;
   width: 33vw;
   bottom: 0;
+}
+body .svg__PlasticBagTrash {
+  opacity: 0;
+  position: absolute;
+  width: 15VW;
+  bottom: 4vw;
+  right: 21vw;
+  animation: plasticThrow 5s ease-in-out;
+  animation-delay: 8s;
 }
 body .svg__town {
   position: absolute;
@@ -332,7 +383,6 @@ body .svg__jojabag--boat {
   right: 40%;
   bottom: 0;
   width: 20vw;
-  animation: fadeOut 5.5s forwards;
 }
 body .svg__truck {
   position: absolute;
@@ -348,7 +398,7 @@ body .svg__trench {
   height: auto;
   animation: slideUp 4s linear;
   bottom: 0;
-  opacity: 0.3;
+  opacity: 1;
 }
 body .svg__trench-one {
   left: 0;
@@ -357,10 +407,14 @@ body .svg__trench-two {
   right: 0;
 }
 body .svg__anglerFish {
+  opacity: 0;
   position: absolute;
   width: 20vw;
   bottom: 10vw;
-  left: 45vw;
+  right: 15vw;
+  animation: swimDistance 8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
 }
 body .svg__bottomPlasticBag {
   position: absolute;
