@@ -218,7 +218,7 @@ section {
           transform: translateX(0) scaleX(-1);
         }
         100% {
-          transform: translateX(-200%) scaleX(-1);
+          transform: translateX(-370%) scaleX(-1);
         }
       }
 
@@ -232,7 +232,7 @@ section {
       }
       
       .guy {
-          animation: walkDistance 8s forwards infinite linear;
+          animation: walkDistance 8s forwards linear;
           transform: scaleX(-1);
       }
 
@@ -240,18 +240,19 @@ section {
     .svg{
         &__town{
             position: absolute;
-            width: 20vw;
+            width: 33vw;
             bottom: 0;
+            opacity: 90%;
             &-1 {
-                left: 35vw;
+                left: 0vw;
             }
 
             &-2 {
-                left: 20vw;
+                left: 16vw;
             }
 
             &-3{
-                left: 5vw;
+                left: 32vw;
             }
         }
 
@@ -283,19 +284,44 @@ section {
         }
         
         &__jojamart {
-
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40vw;
         }
 
         &__carlos {
-
+            position: absolute;
+            right: 9.6vw;
+            bottom: 0;
+            width: 4vw;
+            
         }
 
-        &__trashcan {
+        &__jojadoor {
+            position: absolute;
+            bottom: 0;
+            right: 9.4vw;
+            width: 4.74vw;
+        }
 
+        &__trashbin {
+            position: absolute;
+            bottom: 0;
+            left: 66vw;
         }
 
         &__recyclebin {
+            position: absolute;
+            bottom: 0;
+            left: 58vw;
+        }
 
+        &__storegull {
+            position: absolute;
+            top: 5vw;
+            left: 45vw;
+            width: 10vw;
         }
 
         &__jojabag {
