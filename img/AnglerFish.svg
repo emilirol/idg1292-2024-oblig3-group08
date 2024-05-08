@@ -48,7 +48,7 @@
         fill: blue;
       }
 
-          .cls-13{
+      .cls-13{
         fill: #fcee21;
         stroke: #231f20;
         stroke-linecap: round;
