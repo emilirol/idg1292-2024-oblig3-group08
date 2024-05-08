@@ -1,4 +1,5 @@
 $sky: rgb(139, 212, 236);
+$backgroundBlue: rgb(30, 154, 228);
 $darkBlue: rgb(22, 22, 129);
 $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
@@ -11,15 +12,14 @@ img {
 }
 
 
+
+
 body{
     margin: 0;
     background: linear-gradient($sky, $darkestDeep);
     font-family: Arial, Helvetica, sans-serif;
     color: $white;
-
-    :root{
-        font-size: clamp(1rem, calc(0.437rem + 0.0225vw), 3.25rem);
-    }
+    font-size: clamp(1rem, calc(0.4375rem+0.0225vw), 3.25rem);
  
     .onOff__button--container{
         margin-top: 20px;
@@ -68,6 +68,89 @@ section {
         }
     }
 
+    .infoTags{
+        position: absolute;
+        margin: 0;
+        max-width: 10vw;
+        padding: 3vw 2vw;
+        background: rgb(30, 154, 228, 0.5); 
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        &.plasticBag{
+            right: 5vw;
+            top: 5vw;
+        }
+
+        &.goal14{
+            font-size: 1rem;
+
+            &.nr1{
+                font-size: 1.2rem;
+                padding: 3vw 10vw;
+                padding-left: 3vw;
+                left: 2vw;
+                top: 1vw;
+            }
+            &.nr2{
+                padding-top: 1vw;
+                padding-bottom: 1vw;
+                left: 2vw;
+                bottom: 2vw;
+            }
+            &.nr3{
+                top: 1vw;
+                right: 2vw;
+            }
+        }
+    }
+    #wastePyramid{
+        position: absolute;
+        opacity: 0.5;
+        width: 20vw;
+        bottom: 2vw;
+        left: 20vw;
+    }
+
+    .UNgoal14{
+        position: absolute;
+        width: 5vw;
+        top: 9vw;
+        left: 19.5vw;
+    }
+
+    .bubble {
+        position: absolute;
+        opacity: 0.4;
+    
+        &.one {
+            right: 5vw;
+            width: 7vw;
+            top: 5vw;
+            animation: fadeInAndRise 4s ease-in-out forwards infinite;
+        }
+        &.two {
+            right: 15vw;
+            width: 5vw;
+            top: 2vw;
+            animation: fadeInAndRise 5s ease-in-out forwards infinite;
+        }
+
+        &.three {
+            right: 25vw;
+            width: 7vw;
+            top: 10vw;
+            animation: fadeInAndRise 3s ease-in-out forwards infinite;
+        }
+
+        &.fore{
+            right: 35vw;
+            width: 5vw;
+            top: 7vw;
+            animation: fadeInAndRise 4s ease-in-out forwards infinite;
+        }
+    
+    }
     @keyframes fadeInAndRise {
         0% {
             opacity: 0;
@@ -75,9 +158,62 @@ section {
         }
         100% {
             opacity: 1;
-            transform: translateY(0px);
+            transform: translateY(0);
         }
       }
+
+    .fish{
+        position: absolute;
+        width: 8vw; 
+        animation: swimAnimation 10s forwards linear infinite;
+
+        &.one{
+            top: 8vw;
+            left: 30vw;
+            opacity: 0.5;
+        }
+        &.two{
+            top: 21vw;
+            left: 23vw;
+            opacity: 0.5;
+        }
+        &.three{
+            top: 25vw;
+            left: 15vw;
+            opacity: 0.3;
+        }
+        &.four{
+            bottom: 20vw;
+            left: 10vw;
+            opacity: 0.5;
+        }
+        &.five{
+            bottom: 22vw;
+            left: 20vw;
+            opacity: 0.6;
+        }
+        &.six{
+            bottom: 15vw;
+            left: 30vw;
+            opacity: 0.8;
+        }
+        &.seven{
+            bottom: 5vw;
+            left: 25vw;
+            opacity: 0.4;
+        }
+    }
+    @keyframes swimAnimation {
+        0%{
+            transform: translateX(1200%);
+        }
+        100%{
+            transform: translateX(-500%);
+        }
+    }
+
+    
+
 
     @keyframes walkDistance {
         0% {
@@ -151,7 +287,7 @@ section {
 
         &__trench{
             position: absolute;
-            width: 40vw;
+            width: 30vw;
             height: auto;
             animation: slideUp 4s linear;
             bottom: 0;
@@ -167,6 +303,15 @@ section {
 
           }
 
+          @keyframes slideUp {
+            0%{
+              transform: translateY(100%);
+            }
+            100% {
+              transform: translateY(0);
+            }
+            }
+
           &__anglerFish{
             position: absolute;
             width: 20vw;
@@ -176,62 +321,25 @@ section {
 
           &__bottomPlasticBag{
             position: absolute;
-            width: 20vw;
-            bottom:8vw;
-            left: 35vw;
+            width: 30vw;
+            bottom:6vw;
+            left: 30vw;
           }
           
          
     }
     
 
-    p{
-        font-weight: bold;
-    }
+    
 
 
 }
 
 
 
-.bubble {
-    position: fixed;
-    width: 100px;
-    height: 100px;
 
-    &--one {
-        top: 30vh;
-        left: 50%;
-        animation: fadeInAndRise 4s ease-in-out forwards infinite;
-    }
-  
-   
-    &--two {
-        top: 10vh;
-        left: 60%;
-        animation: fadeInAndRise 5s ease-in-out forwards infinite;
-    }
-  
 
-    &--three {
-        top: 20vh;
-        right: 20%;
-        animation: fadeInAndRise 3s ease-in-out forwards infinite;
-    }
-    &--fore{
-        top: 20vh;
-        left: 40%;
-        animation: fadeInAndRise 4s ease-in-out forwards infinite;
-    }
 
-}
 
-@keyframes slideUp {
-    0%{
-      transform: translateY(100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-    }
+
 
