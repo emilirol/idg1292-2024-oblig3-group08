@@ -127,7 +127,7 @@ body .bubble.fore {
 @keyframes fadeInAndRise {
   0% {
     opacity: 0;
-    transform: translateY(300px);
+    transform: translateY(30%);
   }
   100% {
     opacity: 1;
@@ -202,9 +202,6 @@ body .guy {
   animation: walkDistance 8s forwards infinite linear;
   transform: scaleX(-1);
 }
-body .truck {
-  animation: driveDistance 4s forwards infinite linear;
-}
 body .svg__town {
   position: absolute;
   width: 20vw;
@@ -218,6 +215,42 @@ body .svg__town-2 {
 }
 body .svg__town-3 {
   left: 5vw;
+}
+body .svg__bottle {
+  position: absolute;
+  right: 20%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingBottle 8s linear infinite;
+  opacity: 0.5;
+}
+body .svg__bottle--two {
+  position: absolute;
+  left: 10%;
+  bottom: 6vw;
+  width: 2vw;
+  animation: floatingCan 6s linear infinite;
+  opacity: 0.6;
+}
+body .svg__soda {
+  position: absolute;
+  left: 30%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingCan 5s linear infinite;
+  opacity: 0.8;
+}
+body .svg__jojabag--boat {
+  position: absolute;
+  right: 40%;
+  bottom: 0;
+  width: 20vw;
+  animation: fadeOut 5.5s forwards;
+}
+body .svg__truck {
+  position: absolute;
+  bottom: 0;
+  width: 30vw;
 }
 body .svg__trench {
   position: absolute;
@@ -249,7 +282,104 @@ body .svg__anglerFish {
 }
 body .svg__bottomPlasticBag {
   position: absolute;
-  width: 30vw;
-  bottom: 6vw;
+  width: 20vw;
+  bottom: 8vw;
   left: 30vw;
+  animation: floatingBottle 8s linear infinite;
+}
+body .svg__waves {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 2vw;
+  left: 0;
+}
+body .svg__waves--two {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+body .svg__boat {
+  position: absolute;
+  width: 30vw;
+  bottom: 10vw;
+  animation: bobbing 4s ease-in-out infinite;
+  left: 30vw;
+}
+body p {
+  font-weight: bold;
+}
+
+.bubble {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+}
+.bubble--one {
+  top: 30vh;
+  left: 50%;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+.bubble--two {
+  top: 10vh;
+  left: 60%;
+  animation: fadeInAndRise 5s ease-in-out forwards infinite;
+}
+.bubble--three {
+  top: 20vh;
+  right: 20%;
+  animation: fadeInAndRise 3s ease-in-out forwards infinite;
+}
+.bubble--fore {
+  top: 20vh;
+  left: 40%;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floatingCan {
+  0%, 100% {
+    transform: translateY(50%) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-40deg);
+  }
+}
+@keyframes floatingBottle {
+  0%, 100% {
+    transform: translateY(60%) rotate(20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(30deg);
+  }
+}
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(3deg);
+  }
 }/*# sourceMappingURL=style.css.map */

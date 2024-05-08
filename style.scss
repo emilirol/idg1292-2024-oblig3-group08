@@ -154,7 +154,7 @@ section {
     @keyframes fadeInAndRise {
         0% {
             opacity: 0;
-            transform: translateY(300px);
+            transform: translateY(30%);
         }
         100% {
             opacity: 1;
@@ -212,8 +212,6 @@ section {
         }
     }
 
-    
-
 
     @keyframes walkDistance {
         0% {
@@ -238,9 +236,6 @@ section {
           transform: scaleX(-1);
       }
 
-      .truck {
-        animation: driveDistance 4s forwards infinite linear;
-      }
 
     .svg{
         &__town{
@@ -260,6 +255,32 @@ section {
             }
         }
 
+        &__bottle{
+          position: absolute;
+          right: 20%;
+          bottom: 7vw;
+          width: 2vw;
+          animation: floatingBottle 8s linear infinite;
+          opacity: 0.5;
+
+          &--two{
+            position: absolute;
+            left: 10%;
+            bottom: 6vw;
+            width: 2vw;
+            animation: floatingCan 6s linear infinite;
+            opacity: 0.6;
+          }
+        }
+
+        &__soda{
+          position: absolute;
+          left: 30%;
+          bottom: 7vw;
+          width: 2vw;
+          animation: floatingCan 5s linear infinite;
+          opacity: 0.8;
+        }
         
         &__jojamart {
 
@@ -279,11 +300,20 @@ section {
 
         &__jojabag {
 
+          &--boat{
+            position: absolute;
+            right: 40%;
+            bottom: 0;
+            width: 20vw;
+            animation: fadeOut 5.5s forwards;
+          }
         }
 
-        &__trashcar {
-            
-        }
+        &__truck {
+          position: absolute;
+          bottom: 0;
+          width: 30vw;
+      }
 
         &__trench{
             position: absolute;
@@ -321,14 +351,36 @@ section {
 
           &__bottomPlasticBag{
             position: absolute;
+
             width: 30vw;
             bottom:6vw;
             left: 30vw;
+            animation: floatingBottle 8s linear infinite;
+
           }
           
-         
+         &__waves{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            bottom: 2vw;
+            left: 0;
+
+            &--two{
+              position: absolute;
+              width: 100%;
+              bottom: 0;
+              left: 0;
+            } 
+         }
+         &__boat{
+          position: absolute;
+          width: 30vw;
+          bottom: 10vw;
+          animation: bobbing 4s ease-in-out infinite;
+          left: 30vw;
+         }
     }
-    
 
     
 
@@ -339,7 +391,54 @@ section {
 
 
 
+@keyframes fadeOut{
+  0% {
+    opacity: 1;
+  }
+    100%{
+      opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    0%{
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+    }
 
 
+    @keyframes floatingCan {
+      0%, 100% {
+        transform: translateY(50%) rotate(-20deg);
+      }
+      50% {
+        transform: translateY(0) rotate(-40deg);
+      }
+    }
 
+    @keyframes floatingBottle{
+      0%, 100%{
+        transform: translateY(60%) rotate(20deg);
+      }
+      50%{
+        transform: translateY(0) rotate(30deg);
+      }
+    }
 
+    @keyframes bobbing {
+        0%, 100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-10px) rotate(-3deg);
+        }
+        50% {
+          transform: translateY(0) rotate(0deg);
+        }
+        75% {
+          transform: translateY(-10px) rotate(3deg);
+        }
+      }
