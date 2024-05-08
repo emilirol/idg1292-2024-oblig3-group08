@@ -9,9 +9,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
 }
-body :root {
-  font-size: clamp(1rem, 0.437rem + 0.0225vw, 3.25rem);
-}
 body .onOff__button--container {
   margin-top: 20px;
 }
@@ -53,6 +50,80 @@ body #heading p {
   margin-top: 0;
   font-size: 0.7rem;
 }
+body .infoTags {
+  position: absolute;
+  margin: 0;
+  max-width: 10vw;
+  padding: 3vw 2vw;
+  background: rgba(30, 154, 228, 0.5);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+body .infoTags.plasticBag {
+  right: 5vw;
+  top: 5vw;
+}
+body .infoTags.goal14 {
+  font-size: 1rem;
+}
+body .infoTags.goal14.nr1 {
+  font-size: 1.2rem;
+  padding: 3vw 10vw;
+  padding-left: 3vw;
+  left: 2vw;
+  top: 1vw;
+}
+body .infoTags.goal14.nr2 {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  left: 2vw;
+  bottom: 2vw;
+}
+body .infoTags.goal14.nr3 {
+  top: 1vw;
+  right: 2vw;
+}
+body #wastePyramid {
+  position: absolute;
+  opacity: 0.5;
+  width: 20vw;
+  bottom: 2vw;
+  left: 20vw;
+}
+body .UNgoal14 {
+  position: absolute;
+  width: 5vw;
+  top: 9vw;
+  left: 19.5vw;
+}
+body .bubble {
+  position: absolute;
+  opacity: 0.4;
+}
+body .bubble.one {
+  right: 5vw;
+  width: 7vw;
+  top: 5vw;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
+body .bubble.two {
+  right: 15vw;
+  width: 5vw;
+  top: 2vw;
+  animation: fadeInAndRise 5s ease-in-out forwards infinite;
+}
+body .bubble.three {
+  right: 25vw;
+  width: 7vw;
+  top: 10vw;
+  animation: fadeInAndRise 3s ease-in-out forwards infinite;
+}
+body .bubble.fore {
+  right: 35vw;
+  width: 5vw;
+  top: 7vw;
+  animation: fadeInAndRise 4s ease-in-out forwards infinite;
+}
 @keyframes fadeInAndRise {
   0% {
     opacity: 0;
@@ -61,6 +132,54 @@ body #heading p {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+body .fish {
+  position: absolute;
+  width: 8vw;
+  animation: swimAnimation 10s forwards linear infinite;
+}
+body .fish.one {
+  top: 8vw;
+  left: 30vw;
+  opacity: 0.5;
+}
+body .fish.two {
+  top: 21vw;
+  left: 23vw;
+  opacity: 0.5;
+}
+body .fish.three {
+  top: 25vw;
+  left: 15vw;
+  opacity: 0.3;
+}
+body .fish.four {
+  bottom: 20vw;
+  left: 10vw;
+  opacity: 0.5;
+}
+body .fish.five {
+  bottom: 22vw;
+  left: 20vw;
+  opacity: 0.6;
+}
+body .fish.six {
+  bottom: 15vw;
+  left: 30vw;
+  opacity: 0.8;
+}
+body .fish.seven {
+  bottom: 5vw;
+  left: 25vw;
+  opacity: 0.4;
+}
+@keyframes swimAnimation {
+  0% {
+    transform: translateX(1250%);
+  }
+  100% {
+    transform: translateX(-500%);
   }
 }
 @keyframes walkDistance {
@@ -82,9 +201,6 @@ body #heading p {
 body .guy {
   animation: walkDistance 8s forwards linear;
   transform: scaleX(-1);
-}
-body .truck {
-  animation: driveDistance 4s forwards infinite linear;
 }
 body .svg__town {
   position: absolute;
@@ -135,35 +251,105 @@ body .svg__storegull {
   left: 45vw;
   width: 10vw;
 }
-body #haloLight {
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 2px solid rgb(0, 0, 0);
-  fill: #fcee21;
-  background-color: #fcee21;
-  animation: halo-animation 1.5s linear infinite;
+body .svg__bottle {
+  position: absolute;
+  right: 20%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingBottle 8s linear infinite;
+  opacity: 0.5;
 }
-@keyframes halo-animation {
+body .svg__bottle--two {
+  position: absolute;
+  left: 10%;
+  bottom: 6vw;
+  width: 2vw;
+  animation: floatingCan 6s linear infinite;
+  opacity: 0.6;
+}
+body .svg__soda {
+  position: absolute;
+  left: 30%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingCan 5s linear infinite;
+  opacity: 0.8;
+}
+body .svg__jojabag--boat {
+  position: absolute;
+  right: 40%;
+  bottom: 0;
+  width: 20vw;
+  animation: fadeOut 5.5s forwards;
+}
+body .svg__truck {
+  position: absolute;
+  bottom: 0;
+  width: 30vw;
+}
+body .svg__trench {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  animation: slideUp 4s linear;
+  bottom: 0;
+  opacity: 0.3;
+}
+body .svg__trench-one {
+  left: 0;
+}
+body .svg__trench-two {
+  right: 0;
+}
+@keyframes slideUp {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
+    transform: translateY(100%);
   }
   100% {
-    box-shadow: 0 0 0 30px rgba(255, 255, 0, 0);
+    transform: translateY(0);
   }
+}
+body .svg__anglerFish {
+  position: absolute;
+  width: 20vw;
+  bottom: 10vw;
+  left: 45vw;
+}
+body .svg__bottomPlasticBag {
+  position: absolute;
+  width: 20vw;
+  bottom: 8vw;
+  left: 30vw;
+  animation: floatingBottle 8s linear infinite;
+}
+body .svg__waves {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 2vw;
+  left: 0;
+}
+body .svg__waves--two {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+body .svg__boat {
+  position: absolute;
+  width: 30vw;
+  bottom: 10vw;
+  animation: bobbing 4s ease-in-out infinite;
+  left: 30vw;
 }
 body p {
   font-weight: bold;
 }
 
 .bubble {
-  position: fixed;
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
 }
 .bubble--one {
   top: 30vh;
@@ -186,6 +372,14 @@ body p {
   animation: fadeInAndRise 4s ease-in-out forwards infinite;
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes slideUp {
   0% {
     transform: translateY(100%);
@@ -194,20 +388,33 @@ body p {
     transform: translateY(0);
   }
 }
-.trench--one {
-  position: absolute;
-  width: 40vw;
-  height: auto;
-  top: 5vh;
-  left: 0;
-  animation: slideUp 4s linear;
+@keyframes floatingCan {
+  0%, 100% {
+    transform: translateY(50%) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-40deg);
+  }
 }
-
-.trench--two {
-  position: absolute;
-  width: 40vw;
-  height: auto;
-  top: 5vh;
-  right: 0;
-  animation: slideUp 4s linear;
+@keyframes floatingBottle {
+  0%, 100% {
+    transform: translateY(60%) rotate(20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(30deg);
+  }
+}
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(3deg);
+  }
 }/*# sourceMappingURL=style.css.map */
