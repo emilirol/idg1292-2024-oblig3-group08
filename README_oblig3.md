@@ -18,7 +18,7 @@ to bottom of the ocean where the same plasticbag is found.
 
 ## Code
 ### JavaScript
-We used Java Script (JS) for the intersection observer and the button that's turning the animations on/off for a more accessible webpage.
+We used Java Script (JS) for the intersection observer.
 
 ### HTML
 In html we decided to split the main tag into sections. Every section is working like a canvas.
@@ -33,7 +33,7 @@ a good option. So the background goes from light blue to black.
 The elements are displayed with flex and positioned with position relative and absolute. 
 
 ### Animations
-The elements are animated both inside the svg elements and in the css code. We are using @keyframes and SMIL animation. Our plasticbag is animated with SMIL.
+The elements are animated both inside the svg elements and in the css code. We are using @keyframes and SMIL animation. Our plasticbag, for example, is animated with SMIL.
 
 ## Accessebility
 For a more accessible web page, the animation on the waves can be turned of with @media query in the web browser. 
