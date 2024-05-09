@@ -114,11 +114,6 @@
     transform: translateY(50%) scale(0);
   }
 }
-/* Remove, cap for image size for easier editing */
-img {
-  width: 5vw;
-}
-
 body {
   margin: 0;
   background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
@@ -143,7 +138,6 @@ body section {
   opacity: 0;
   height: 100vh;
   transition: 120ms;
-  border: solid 10px red;
   position: relative;
 }
 body section.show {
@@ -418,11 +412,13 @@ body .svg__trashbin {
   position: absolute;
   bottom: 0;
   left: 66vw;
+  width: 5vw;
 }
 body .svg__recyclebin {
   position: absolute;
   bottom: 0;
   left: 58vw;
+  width: 5vw;
 }
 body .svg__storegull {
   position: absolute;
@@ -479,19 +475,19 @@ body .svg__bottomPlasticBag {
   body .svg__bottomPlasticBag {
     animation-duration: 34s;
   }
-  body .svg__waves {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    bottom: 2vw;
-    left: 0;
-  }
-  body .svg__waves--two {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-  }
+}
+body .svg__waves {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 2vw;
+  left: 0;
+}
+body .svg__waves--two {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 body .svg__boat {
   position: absolute;
@@ -500,7 +496,8 @@ body .svg__boat {
   animation: bobbing 4s ease-in-out infinite;
   left: 30vw;
 }
-body .hidden {
+
+.hidden {
   overflow-y: hidden;
   overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
