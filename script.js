@@ -38,7 +38,7 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
 
-        const els2animate = entry.target.querySelectorAll("#carlos, #doorSlide, #carMove");
+        const els2animate = entry.target.querySelectorAll("#carlos, #doorSlide, #carMove, #trashBag, #anglerMove, .trenchMove, #anglerText");
         console.log(els2animate)
         els2animate.forEach(el=>{
             const animationClassName = el.getAttribute("animation-name");
