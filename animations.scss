@@ -1,3 +1,4 @@
+// keyframes for the animated elements
 @keyframes floatingCan {
     0%, 100% {
       transform: translateY(50%) rotate(-20deg);
@@ -30,16 +31,8 @@
         transform: translateY(-10px) rotate(3deg);
       }
     }
-
-    @keyframes fadeOut{
-        0% {
-          opacity: 1;
-        }
-          100%{
-            opacity: 0;
-          }
-      }
-
+    
+      // the keyframe to fade in elements
       @keyframes fadeIn{
         0% {
             opacity: 0;
@@ -67,7 +60,7 @@
             }
         }
     
-    
+        // keyframe to make Carlos walk out of the store
         @keyframes walkDistance {
             0% {
               transform: translateX(0) scaleX(-1);
@@ -76,7 +69,7 @@
               transform: translateX(-370%) scaleX(-1);
             }
           }
-    
+          // makes the truck drive to the factory
           @keyframes driveDistance{
             0% {
                 transform: translateX(0);
@@ -85,7 +78,7 @@
                 transform: translateX(-250%)
             }
           }
-          
+          // for the bubble elements
           @keyframes fadeInAndRise {
             0% {
                 opacity: 0;
@@ -100,7 +93,7 @@
                 transform: translateY(0);
             }
           }
-          
+          // makes the angler fish to swim into frame
           @keyframes swimDistance{
             0% {
                 opacity: 0;
@@ -111,7 +104,7 @@
                 transform: translateX(-50%)
             }
         }
-
+        // throws the plastic bag off the boat
         @keyframes plasticThrow {
             0% {
               transform: translateY(0);
@@ -125,5 +118,13 @@
             
               100% {
               transform: translateY(50%) scale(0);
+            }
+          }
+          // adds interactivity to the seagull over the store
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            } to {
+              transform: rotate(360deg);
             }
           }
