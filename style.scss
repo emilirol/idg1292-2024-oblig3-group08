@@ -1,5 +1,5 @@
 @use "animations.scss";
-
+// variables for our colors
 $sky: rgb(139, 212, 236);
 $backgroundBlue: rgb(30, 154, 228);
 $darkBlue: rgb(22, 22, 129);
@@ -9,7 +9,7 @@ $yellow:#fcee21;
 $onGreen: #2DC770;
 
 
-
+// adds the gradient background to the entire page
 body{
     margin: 0;
     background: linear-gradient($sky, $darkestDeep);
@@ -17,28 +17,19 @@ body{
     color: $white;
     font-size: clamp(1rem, calc(0.4375rem + 0.0225vw), 3.25rem);
  
-    .onOff__button--container{
-        margin-top: 20px;
-
-        .onOff__button{
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        
-    }
-    
+    // adds a container to the sections
 .section-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-    
+    // makes each section element relative and allows the intersection observer to targt one section at a time
 section {
     opacity: 0;
     height: 100vh;
     transition: 120ms;
     position: relative;
+    // reveals the section when it's inside the viewport by restoring the opacity
     &.show {
         opacity: 1;
     }
@@ -65,7 +56,7 @@ section {
             font-size: 0.7rem;
         }
     }
-
+    // adds basic layout and styling for all the info text
     .infoTags{
         position: absolute;
         margin: 0;
@@ -135,7 +126,7 @@ section {
                 padding: 3vw 10vw;
                 padding-left: 3vw;
                 left: 2vw;
-                top: 1vw;
+                top: 1vw;      
                 animation: fadeIn 2s linear;
                 animation-fill-mode: forwards;
             }
@@ -147,6 +138,7 @@ section {
                 animation: fadeIn 2s linear;
                 animation-fill-mode: forwards;
                 animation-delay: 4s;
+                max-width: 15vw;
             }
             &.nr3{
                 top: 1vw;
@@ -168,7 +160,7 @@ section {
         animation: fadeIn 2s linear;
         animation-fill-mode: forwards;
     }
-
+    // bubbles for the underwater section
     .bubble {
         position: absolute;
         opacity: 0.4;
@@ -202,7 +194,7 @@ section {
     
     }
 
-
+    // fish for the underwater section
     .fish{
         position: absolute;
         width: 8vw; 
@@ -244,19 +236,19 @@ section {
             opacity: 0.4;
         }
     }
-
+    // adds the option to reduce the motion of the fish if user has accessibility settings enabled
     @media (prefers-reduced-motion: reduce) {
       .fish {
           animation-duration: 40s;
       }
   }
-      
+      // makes Carlos walk
       .guy {
           animation: walkDistance 8s forwards linear;
           transform: scaleX(-1);
       }
 
-
+      // nest for all the SVGs
     .svg{
       &__factory{
         position: absolute;
@@ -361,6 +353,10 @@ section {
             top: 5vw;
             left: 45vw;
             width: 10vw;
+            
+            &:hover {
+                animation: spin 0.4s linear infinite;
+            }
         }
 
         &__jojabag {
@@ -370,7 +366,6 @@ section {
             right: 40%;
             bottom: 0;
             width: 20vw;
-            //animation: fadeOut 6s linear infinite;
           }
         }
         
@@ -451,8 +446,27 @@ section {
 
     }
 
-
+// hides scrollbars for elements that begin their animation off page
 .hidden{
   overflow-y: hidden;
   overflow-x: hidden;
+}
+// urges the user to use horizontal viewport for the page on smaller devices
+@media screen and (orientation: portrait) {
+    body::before {
+        content: "Please rotate your device for the best viewing experience";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        text-align: center;
+    }
 }

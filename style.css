@@ -28,14 +28,6 @@
     transform: translateY(-10px) rotate(3deg);
   }
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -114,20 +106,20 @@
     transform: translateY(50%) scale(0);
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 body {
   margin: 0;
   background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   font-size: clamp(1rem, 0.4375rem + 0.0225vw, 3.25rem);
-}
-body .onOff__button--container {
-  margin-top: 20px;
-}
-body .onOff__button--container .onOff__button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
 }
 body .section-container {
   display: flex;
@@ -242,6 +234,7 @@ body .infoTags.goal14.nr2 {
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
   animation-delay: 4s;
+  max-width: 15vw;
 }
 body .infoTags.goal14.nr3 {
   top: 1vw;
@@ -426,6 +419,9 @@ body .svg__storegull {
   left: 45vw;
   width: 10vw;
 }
+body .svg__storegull:hover {
+  animation: spin 0.4s linear infinite;
+}
 body .svg__jojabag--boat {
   position: absolute;
   right: 40%;
@@ -500,4 +496,23 @@ body .svg__boat {
 .hidden {
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+@media screen and (orientation: portrait) {
+  body::before {
+    content: "Please rotate your device for the best viewing experience";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
