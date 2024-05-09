@@ -8,10 +8,6 @@ $white: #FFFFFF;
 $yellow:#fcee21;
 $onGreen: #2DC770;
 
-/* Remove, cap for image size for easier editing */
-img {
-    width: 5vw;
-}
 
 
 body{
@@ -42,7 +38,6 @@ section {
     opacity: 0;
     height: 100vh;
     transition: 120ms;
-    border: solid 10px red;
     position: relative;
     &.show {
         opacity: 1;
@@ -82,7 +77,7 @@ section {
         font-size: 1.5rem;
 
         &.plasticBag{
-          opacity: 0;
+            opacity: 0;
             right: 5vw;
             bottom: 15vw;
             max-width: 10vw;
@@ -351,12 +346,14 @@ section {
             position: absolute;
             bottom: 0;
             left: 66vw;
+            width: 5vw;
         }
 
         &__recyclebin {
             position: absolute;
             bottom: 0;
             left: 58vw;
+            width: 5vw;
         }
 
         &__storegull {
@@ -376,7 +373,7 @@ section {
             //animation: fadeOut 6s linear infinite;
           }
         }
-
+        
         &__truck {
           position: absolute;
           bottom: 0;
@@ -427,7 +424,7 @@ section {
             &__bottomPlasticBag {
                 animation-duration: 34s;
             }
-          
+          }
          &__waves{
             position: absolute;
             width: 100%;
@@ -442,9 +439,6 @@ section {
               left: 0;
             } 
          }
-
-         
-      }
          &__boat{
           position: absolute;
           width: 30vw;
@@ -452,11 +446,13 @@ section {
           animation: bobbing 4s ease-in-out infinite;
           left: 30vw;
          }
+         
+      }
+
     }
 
 
 .hidden{
   overflow-y: hidden;
   overflow-x: hidden;
-}
 }

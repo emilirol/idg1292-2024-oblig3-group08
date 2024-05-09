@@ -8,11 +8,6 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-<!--This div holds the element for the button that turn on/off the animations.-->
-    <div class="onOff__button--container">
-        <button class="onOff__button off" onclick="toggleButton()">ANIMATIONS</button>
-    </div>  
-    
 <!--This heading is telling the goal for the storytelling. The "made in China" is a "fun" comment, because most of the plastic
     produced in the world is being produced in China. -->
     <main> 
@@ -33,7 +28,7 @@
             <img class="svg__recyclebin" src="img/RecycleBin.svg" alt="">
 
 
-            <svg class="svg__PlasticBagTrash" animation-name="svg__PlasticBagTrash" id="trashBag" xmlns="http://www.w3.org/2000/svg" viewBox="-200 0 600 500">
+            <svg class="svg__PlasticBagTrash" animation-name="svg__PlasticBagTrash" id="trashBag" width="0" xmlns="http://www.w3.org/2000/svg" viewBox="-200 0 600 500">
               <defs>
                 <style>
                   .plasticTrash-1 {
@@ -123,7 +118,7 @@
 
 
 
-            <p class="infoTags goal14 fact1">only 10% of plastics produced is recycled.</p>
+            <p class="infoTags goal14 fact1" animation-name="fact1" id="fact1">only 10% of plastics produced is recycled.</p>
 
 
             <svg class="svg__carlos" animation-name="guy" id="carlos" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69.22 163.73">
@@ -290,11 +285,11 @@
 <!--This section shows a trash car driving away with the plasticbag to a factory that burns plastic. 
     We have some facts about how much plastic that is being produced in the world, how many precent that is being recycled, burned or dumped on land.-->
     <section class="hidden">
-            <p class="infoTags goal14 fact2">19% of plastics produced is burned.</p>
-            <p class="infoTags goal14 fact3">50% of plastics produced are dumped on land and in landfills.</p>
-            <p class="infoTags goal14 fact4">430 million tons of plastic is being produced every year.</p>
+            <p class="infoTags goal14 fact2" animation-name="fact2" id="fact2">19% of plastics produced is burned.</p>
+            <p class="infoTags goal14 fact3" animation-name="fact3" id="fact3">50% of plastics produced are dumped on land and in landfills.</p>
+            <p class="infoTags goal14 fact4" animation-name="fact4" id="fact4">430 million tons of plastic is being produced every year.</p>
 
-<svg class="svg__truck" animation-name="svg__truck" id="carMove" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.2 287">
+<svg class="svg__truck" animation-name="svg__truck" id="carMove" width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 588.2 287">
   <defs>
     <style>
       .car-1 {
@@ -439,7 +434,7 @@
 
 <!--The boat section shows a boat sailing on the sea and trash that's floating around in the sea.-->
     <section class="imageSection__boat">
-        <p class="infoTags goal14 fact5"> 22% is being dumped on uncontrolled heaps, burned in nature or leaks into the environment.</p>
+        <p class="infoTags goal14 fact5" animation-name="fact5" id="fact5"> 22% is being dumped on uncontrolled heaps, burned in nature or leaks into the environment.</p>
         <img class="svg__waves" src="img/waves.svg" alt="waves on the sea">
                 <img class="svg__boat" src="img/boated.svg" alt="Boat">
         <img class="svg__waves--two" src="img/waves-two.svg" alt="waves on the sea">
@@ -463,19 +458,18 @@
         <img class="bubble two" src="img/Buble.svg" alt="Bubble">
         <img class="bubble three" src="img/Buble.svg" alt="Bubble">
         <img class="bubble fore" src="img/Buble.svg" alt="Bubble">   
-        <p class="infoTags goal14 nr1">UNs sustainability goal 14</p>
-        <p class="infoTags goal14 nr2">To solve the plastic pollution problem. We must work together to keep the oceans clean!</p> 
-        <p class="infoTags goal14 nr3">Conserve and sustainably use the oceans, seas and marine resources for sustainable development</p>
-        <img class="UNgoal14"  src="img/E_WEB_14.png" alt="UN Goal 14 Blue">
+        <p class="infoTags goal14 nr1" animation-name="nr1" id="nr1">UNs sustainability goal 14</p>
+        <p class="infoTags goal14 nr2" animation-name="nr2" id="nr2">To solve the plastic pollution problem. We must work together to keep the oceans clean!</p> 
+        <p class="infoTags goal14 nr3" animation-name="nr3" id="nr3">Conserve and sustainably use the oceans, seas and marine resources for sustainable development</p>
     </section>
 
 
 <!--The last section shows the bottom of a trench on the deepest part of the ocean. Here we see a angler fish that lights up in the dark, and 
     reveals a plastic bag. The same bag that Carlos was throwing away in the second section. -->
     <section class="hidden">
-        <p class="infoTags plasticBag" animation-name="plasticBag" id="anglerText">IS THIS YOUR PLASTIC BAG?</p>
+        <p class="infoTags plasticBag" animation-name="plasticBag" id="anglerText" width="0">IS THIS YOUR PLASTIC BAG?</p>
         
-        <svg class="svg__anglerFish" animation-name="svg__anglerFish" id="anglerMove" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.12 232.82">
+        <svg class="svg__anglerFish" animation-name="svg__anglerFish" id="anglerMove" width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.12 232.82">
           <defs>
             <style>
               .angler-1, .angler-2, .angler-3, .angler-4, .angler-5, .angler-6 {
@@ -630,7 +624,7 @@
           </g>
         </svg>
         <!--  -->
-        <svg class="svg__trench svg__trench-one trenchMove" animation-name="svg__trench" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812.82 1003.04">
+        <svg class="svg__trench svg__trench-one trenchMove" animation-name="svg__trench" width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812.82 1003.04">
           <defs>
             <style>
               .leftTrench-1 {
@@ -646,7 +640,7 @@
         </svg>
 
 
-        <svg class="svg__trench svg__trench-two trenchMove" animation-name="svg__trench" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 785.71 1011.03">
+        <svg class="svg__trench svg__trench-two trenchMove" animation-name="svg__trench" width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 785.71 1011.03">
           <defs>
             <style>
               .rightTrench-1 {
