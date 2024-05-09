@@ -447,4 +447,12 @@ body .svg__boat {
 .hidden {
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.goal14--fact-1 {
+  opacity: 0;
+  animation: fadeIn 2s linear forwards;
+  animation-delay: 8s;
+  bottom: 12vw;
+  right: 10vw;
 }/*# sourceMappingURL=style.css.map */
