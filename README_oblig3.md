@@ -44,7 +44,7 @@ For the svg elements we decided to use the img tag for a shorter and more clean 
 when the intersection observer adds and removes animations the SVG is direclty in the HTML code to provide access.
 
 Link to GitHub Pages: 
-![Github Pages](https://advancedcss2024.github.io/idg1292-2024-oblig3-group08/)
+[Github Pages](https://advancedcss2024.github.io/idg1292-2024-oblig3-group08/)
 
 ### CSS
 In the css code we decided to use as little as possible of the pixel value, and as much as possible of the view width (vw) for a 
