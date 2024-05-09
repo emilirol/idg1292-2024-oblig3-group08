@@ -90,32 +90,39 @@ section {
             animation: fadeIn 10s linear;
             animation-delay: 4s;
             animation-fill-mode: forwards;
+            word-wrap: break-word;
         }
 
         &.goal14{
           opacity: 0;
             font-size: 1rem;
-            animation: fadeIn 2s linear;
-            animation-fill-mode: forwards;
 
             &.fact1{
               bottom: 12vw;
               right: 10vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
               animation-delay: 8s;
             }
             &.fact2{
               top: 5vw;
               right: 13vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
               animation-delay: 4s;
             }
             &.fact3{
               top: 5vw;
               left: 50vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
               animation-delay: 2s; 
             }
             &.fact4{
               top: 5vw;
               left: 30vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
             }
 
             &.fact5{
@@ -124,6 +131,8 @@ section {
               animation-delay: 2s; 
               max-width: 20vw;
               word-wrap: break-word;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
             }
 
             &.nr1{
@@ -132,19 +141,25 @@ section {
                 padding-left: 3vw;
                 left: 2vw;
                 top: 1vw;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
             }
             &.nr2{
                 padding-top: 1vw;
                 padding-bottom: 1vw;
                 left: 2vw;
                 bottom: 2vw;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
                 animation-delay: 4s;
             }
             &.nr3{
                 top: 1vw;
                 right: 2vw;
-                animation-delay: 2s;
                 word-wrap: break-word;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 2s;
             }
         }
     }
@@ -192,6 +207,7 @@ section {
     
     }
 
+
     .fish{
         position: absolute;
         width: 8vw; 
@@ -233,6 +249,12 @@ section {
             opacity: 0.4;
         }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fish {
+          animation-duration: 40s;
+      }
+  }
       
       .guy {
           animation: walkDistance 8s forwards linear;
@@ -400,6 +422,11 @@ section {
             left: 30vw;
             animation: floatingBottle 8s linear infinite;
           }
+
+          @media (prefers-reduced-motion: reduce) {
+            &__bottomPlasticBag {
+                animation-duration: 34s;
+            }
           
          &__waves{
             position: absolute;
@@ -415,6 +442,9 @@ section {
               left: 0;
             } 
          }
+
+         
+      }
          &__boat{
           position: absolute;
           width: 30vw;
@@ -424,9 +454,9 @@ section {
          }
     }
 
-}
 
 .hidden{
   overflow-y: hidden;
   overflow-x: hidden;
+}
 }
