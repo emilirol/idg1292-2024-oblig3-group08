@@ -189,31 +189,38 @@ body .infoTags.plasticBag {
   animation: fadeIn 10s linear;
   animation-delay: 4s;
   animation-fill-mode: forwards;
+  word-wrap: break-word;
 }
 body .infoTags.goal14 {
   opacity: 0;
   font-size: 1rem;
-  animation: fadeIn 2s linear;
-  animation-fill-mode: forwards;
 }
 body .infoTags.goal14.fact1 {
   bottom: 12vw;
   right: 10vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
   animation-delay: 8s;
 }
 body .infoTags.goal14.fact2 {
   top: 5vw;
   right: 13vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
   animation-delay: 4s;
 }
 body .infoTags.goal14.fact3 {
   top: 5vw;
   left: 50vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
   animation-delay: 2s;
 }
 body .infoTags.goal14.fact4 {
   top: 5vw;
   left: 30vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
 }
 body .infoTags.goal14.fact5 {
   top: 5vw;
@@ -221,6 +228,8 @@ body .infoTags.goal14.fact5 {
   animation-delay: 2s;
   max-width: 20vw;
   word-wrap: break-word;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
 }
 body .infoTags.goal14.nr1 {
   font-size: 1.2rem;
@@ -228,19 +237,25 @@ body .infoTags.goal14.nr1 {
   padding-left: 3vw;
   left: 2vw;
   top: 1vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
 }
 body .infoTags.goal14.nr2 {
   padding-top: 1vw;
   padding-bottom: 1vw;
   left: 2vw;
   bottom: 2vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
   animation-delay: 4s;
 }
 body .infoTags.goal14.nr3 {
   top: 1vw;
   right: 2vw;
-  animation-delay: 2s;
   word-wrap: break-word;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 body .UNgoal14 {
   position: absolute;
@@ -318,6 +333,11 @@ body .fish.seven {
   bottom: 5vw;
   left: 25vw;
   opacity: 0.4;
+}
+@media (prefers-reduced-motion: reduce) {
+  body .fish {
+    animation-duration: 40s;
+  }
 }
 body .guy {
   animation: walkDistance 8s forwards linear;
@@ -455,18 +475,23 @@ body .svg__bottomPlasticBag {
   left: 30vw;
   animation: floatingBottle 8s linear infinite;
 }
-body .svg__waves {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  bottom: 2vw;
-  left: 0;
-}
-body .svg__waves--two {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+@media (prefers-reduced-motion: reduce) {
+  body .svg__bottomPlasticBag {
+    animation-duration: 34s;
+  }
+  body .svg__waves {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 2vw;
+    left: 0;
+  }
+  body .svg__waves--two {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
 }
 body .svg__boat {
   position: absolute;
@@ -475,8 +500,7 @@ body .svg__boat {
   animation: bobbing 4s ease-in-out infinite;
   left: 30vw;
 }
-
-.hidden {
+body .hidden {
   overflow-y: hidden;
   overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */

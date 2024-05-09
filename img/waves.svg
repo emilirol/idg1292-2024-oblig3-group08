@@ -6,6 +6,12 @@
   fill: #59d6ff;
 }
 
+    @media (prefers-reduced-motion: reduce) {
+      .wave {
+        animation: none;
+      }
+    }
+
 @keyframes waves {
   0%,
   80% {
