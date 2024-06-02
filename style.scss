@@ -7,12 +7,13 @@ $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 $yellow:#fcee21;
 $onGreen: #2DC770;
+$seaBlue: rgb(46, 48, 136);
 
 
 // adds the gradient background to the entire page
 body{
     margin: 0;
-    background: linear-gradient($sky, $darkestDeep);
+    background: linear-gradient($sky 30%, $seaBlue 70%, $darkestDeep 90%);
     font-family: Arial, Helvetica, sans-serif;
     color: $white;
     font-size: clamp(1rem, calc(0.4375rem + 0.0225vw), 3.25rem);
@@ -36,24 +37,20 @@ section {
 }
         
     #heading{
-        height: 50vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         h1 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 4rem;
             letter-spacing: 0.5vw;
             text-shadow: 10px 10px 20px $darkBlue;
             margin-bottom: 0;
             animation: fadeIn 2s linear;
             animation-fill-mode: forwards;
             overflow-wrap: break-word;
-        }
-        p {
-            margin-top: 2vw;
-            font-size: 0.7rem;
         }
     }
     // adds basic layout and styling for all the info text
@@ -284,33 +281,6 @@ section {
                 left: 32vw;
             }
         }
-
-        &__bottle{
-          position: absolute;
-          right: 20%;
-          bottom: 7vw;
-          width: 2vw;
-          animation: floatingBottle 8s linear infinite;
-          opacity: 0.5;
-
-          &--two{
-            position: absolute;
-            left: 10%;
-            bottom: 6vw;
-            width: 2vw;
-            animation: floatingCan 6s linear infinite;
-            opacity: 0.6;
-          }
-        }
-
-        &__soda{
-          position: absolute;
-          left: 30%;
-          bottom: 7vw;
-          width: 2vw;
-          animation: floatingCan 5s linear infinite;
-          opacity: 0.8;
-        }
         
         &__jojamart {
             position: absolute;
@@ -319,7 +289,7 @@ section {
             width: 40vw;
         }
 
-        &__carlos {
+        &__shopper {
             position: absolute;
             right: 9.6vw;
             bottom: 0;
@@ -348,15 +318,46 @@ section {
             width: 5vw;
         }
 
+    // Added a crusor: pointer to the seagull so it is clearer that it is interactive
         &__storegull {
             position: absolute;
-            top: 5vw;
-            left: 45vw;
+            top: 35vw;
+            left: 35vw;
             width: 10vw;
+            cursor: pointer;
             
             &:hover {
-                animation: spin 0.4s linear infinite;
+                animation: spin 0.8s linear infinite;
             }
+        }
+
+        &__plasticTower{
+            position: absolute;
+            width: 30vw;
+
+            &-one{
+                top: 20vw;
+                left: 35vw;
+            }
+            &-two{
+                top: 30vw;
+                right: 20vw;
+            }
+            &-three{
+                top: 25vw;
+                left: 20vw;
+            }
+            &-four{
+                top: 30vw;
+                left: 25vw;
+            }
+        }
+
+        &__plasticBag{
+            width: 20vw;
+            position: absolute;
+            top: 35vw;
+            left: 16vw;
         }
 
         &__jojabag {
