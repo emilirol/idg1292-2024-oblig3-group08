@@ -116,7 +116,7 @@
 }
 body {
   margin: 0;
-  background: linear-gradient(rgb(139, 212, 236), rgb(0, 0, 0));
+  background: linear-gradient(rgb(139, 212, 236) 30%, rgb(46, 48, 136) 70%, rgb(0, 0, 0) 90%);
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   font-size: clamp(1rem, 0.4375rem + 0.0225vw, 3.25rem);
@@ -128,15 +128,27 @@ body .section-container {
 }
 body section {
   opacity: 0;
-  height: 100vh;
+  height: 90vh;
   transition: 120ms;
   position: relative;
 }
 body section.show {
   opacity: 1;
 }
+body #upToTop {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  bottom: 1vw;
+  left: 40vw;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
 body #heading {
-  height: 50vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,105 +156,124 @@ body #heading {
 }
 body #heading h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 4rem;
   letter-spacing: 0.5vw;
   text-shadow: 10px 10px 20px rgb(22, 22, 129);
   margin-bottom: 0;
-  animation: fadeIn 2s linear;
-  animation-fill-mode: forwards;
-  overflow-wrap: break-word;
-}
-body #heading p {
-  margin-top: 2vw;
-  font-size: 0.7rem;
 }
 body .infoTags {
   position: absolute;
   margin: 0;
-  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
-  max-width: 10vw;
-  padding: 3vw 2vw;
-  background: rgba(30, 154, 228, 0.5);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
-body .infoTags.plasticBag {
-  opacity: 0;
-  right: 5vw;
-  bottom: 15vw;
-  max-width: 10vw;
+body .infoTags.shoppingNet {
+  top: 3vw;
+  width: 20vw;
+  left: 2vw;
   z-index: 1;
-  animation: fadeIn 10s linear;
-  animation-delay: 4s;
-  animation-fill-mode: forwards;
-  word-wrap: break-word;
+  font-size: 2rem;
 }
 body .infoTags.goal14 {
   opacity: 0;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 body .infoTags.goal14.fact1 {
-  bottom: 12vw;
-  right: 10vw;
+  top: 10vw;
+  left: 10vw;
+  font-size: 2.5rem;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 8s;
+  animation-delay: 2s;
 }
 body .infoTags.goal14.fact2 {
   top: 5vw;
-  right: 13vw;
+  left: 10vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 4s;
+  animation-delay: 1s;
 }
 body .infoTags.goal14.fact3 {
-  top: 5vw;
-  left: 50vw;
+  top: 15vw;
+  left: 10vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
 body .infoTags.goal14.fact4 {
-  top: 5vw;
-  left: 30vw;
-  animation: fadeIn 2s linear;
+  top: 10vw;
+  left: 10vw;
+  opacity: 0;
+  animation: fadeIn 4s linear;
   animation-fill-mode: forwards;
+  font-size: 2.5rem;
 }
 body .infoTags.goal14.fact5 {
   top: 5vw;
-  right: 10vw;
-  animation-delay: 2s;
-  max-width: 20vw;
-  word-wrap: break-word;
+  left: 10vw;
+  width: 50vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 body .infoTags.goal14.nr1 {
-  font-size: 1.2rem;
-  padding: 3vw 10vw;
-  padding-left: 3vw;
-  left: 2vw;
-  top: 1vw;
+  left: 15vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
 }
 body .infoTags.goal14.nr2 {
-  padding-top: 1vw;
-  padding-bottom: 1vw;
+  padding-bottom: 10px;
   left: 2vw;
-  bottom: 2vw;
+  bottom: 0;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 4s;
-  max-width: 15vw;
+  animation-delay: 8s;
+  font-size: 3rem;
 }
 body .infoTags.goal14.nr3 {
-  top: 1vw;
-  right: 2vw;
+  top: 5vw;
+  left: 15vw;
   word-wrap: break-word;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
   animation-delay: 2s;
+}
+body .infoTags.goal14.threeTings {
+  opacity: 0;
+  top: 15vw;
+  left: 2vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
+body .infoTags.goal14.preventSeaLevel {
+  opacity: 0;
+  top: 35vw;
+  left: 2vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
+}
+body .infoTags.list {
+  top: 20vw;
+  left: 20vw;
+}
+body .infoTags.list li {
+  opacity: 0;
+  list-style-type: none;
+  font-size: 2.5rem;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+}
+body .infoTags.learnMore {
+  right: 2vw;
+  top: 10vw;
+  font-size: 2rem;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
 }
 body .UNgoal14 {
   position: absolute;
@@ -330,6 +361,35 @@ body .guy {
   animation: walkDistance 8s forwards linear;
   transform: scaleX(-1);
 }
+body .png__unGoal14 {
+  position: absolute;
+  opacity: 0.4;
+  width: 15vw;
+  border-radius: 15% 25%;
+  left: 2%;
+}
+body .png__unGoal14--blue {
+  position: absolute;
+  top: 20vw;
+  right: 5vw;
+  width: 10vw;
+  border-radius: 25%;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+}
+body .png__svanemerket {
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+  width: 10vw;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+}
 body .svg__factory {
   position: absolute;
   width: 33vw;
@@ -359,37 +419,13 @@ body .svg__town-2 {
 body .svg__town-3 {
   left: 32vw;
 }
-body .svg__bottle {
-  position: absolute;
-  right: 20%;
-  bottom: 7vw;
-  width: 2vw;
-  animation: floatingBottle 8s linear infinite;
-  opacity: 0.5;
-}
-body .svg__bottle--two {
-  position: absolute;
-  left: 10%;
-  bottom: 6vw;
-  width: 2vw;
-  animation: floatingCan 6s linear infinite;
-  opacity: 0.6;
-}
-body .svg__soda {
-  position: absolute;
-  left: 30%;
-  bottom: 7vw;
-  width: 2vw;
-  animation: floatingCan 5s linear infinite;
-  opacity: 0.8;
-}
 body .svg__jojamart {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 40vw;
 }
-body .svg__carlos {
+body .svg__shopper {
   position: absolute;
   right: 9.6vw;
   bottom: 0;
@@ -415,12 +451,39 @@ body .svg__recyclebin {
 }
 body .svg__storegull {
   position: absolute;
-  top: 5vw;
-  left: 45vw;
+  top: 32%;
+  left: 35vw;
   width: 10vw;
+  cursor: pointer;
 }
 body .svg__storegull:hover {
-  animation: spin 0.4s linear infinite;
+  animation: spin 0.8s linear infinite;
+}
+body .svg__plasticTower {
+  position: absolute;
+  width: 30vw;
+}
+body .svg__plasticTower-one {
+  top: 20vw;
+  left: 35vw;
+}
+body .svg__plasticTower-two {
+  top: 30vw;
+  right: 20vw;
+}
+body .svg__plasticTower-three {
+  top: 25vw;
+  left: 20vw;
+}
+body .svg__plasticTower-four {
+  top: 30vw;
+  left: 25vw;
+}
+body .svg__plasticBagTower {
+  width: 20vw;
+  position: absolute;
+  top: 35vw;
+  left: 16vw;
 }
 body .svg__jojabag--boat {
   position: absolute;
@@ -435,6 +498,18 @@ body .svg__truck {
   animation: driveDistance 8s linear;
   animation-fill-mode: forwards;
   right: -30vw;
+}
+body .svg__plasticTowerBoat--left {
+  position: absolute;
+  width: 20vw;
+  bottom: 20%;
+  left: 15%;
+}
+body .svg__plasticTowerBoat--right {
+  position: absolute;
+  width: 20vw;
+  bottom: 18%;
+  right: 15%;
 }
 body .svg__trench {
   position: absolute;
@@ -455,16 +530,17 @@ body .svg__anglerFish {
   position: absolute;
   width: 20vw;
   bottom: 10vw;
-  right: 15vw;
+  right: 20vw;
   animation: swimDistance 8s linear;
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
 body .svg__bottomPlasticBag {
   position: absolute;
+  opacity: 0.2;
   width: 30vw;
   bottom: 15vw;
-  left: 30vw;
+  left: 35vw;
   animation: floatingBottle 8s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -484,6 +560,7 @@ body .svg__waves--two {
   width: 100%;
   bottom: 0;
   left: 0;
+  opacity: 0.9;
 }
 body .svg__boat {
   position: absolute;

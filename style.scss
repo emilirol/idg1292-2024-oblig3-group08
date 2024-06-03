@@ -7,12 +7,13 @@ $darkestDeep: rgb(0,0,0);
 $white: #FFFFFF;
 $yellow:#fcee21;
 $onGreen: #2DC770;
+$seaBlue: rgb(46, 48, 136);
 
 
 // adds the gradient background to the entire page
 body{
     margin: 0;
-    background: linear-gradient($sky, $darkestDeep);
+    background: linear-gradient($sky 30%, $seaBlue 70%, $darkestDeep 90%);
     font-family: Arial, Helvetica, sans-serif;
     color: $white;
     font-size: clamp(1rem, calc(0.4375rem + 0.0225vw), 3.25rem);
@@ -26,129 +27,166 @@ body{
     // makes each section element relative and allows the intersection observer to targt one section at a time
 section {
     opacity: 0;
-    height: 100vh;
+    height: 90vh;
     transition: 120ms;
     position: relative;
     // reveals the section when it's inside the viewport by restoring the opacity
     &.show {
         opacity: 1;
     }
-}
-        
+}     
+
+    #upToTop{
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        bottom: 1vw;
+        left: 40vw;
+        opacity: 0;
+        animation: fadeIn 2s linear;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+    }
+
     #heading{
-        height: 50vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         h1 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 4rem;
             letter-spacing: 0.5vw;
             text-shadow: 10px 10px 20px $darkBlue;
             margin-bottom: 0;
-            animation: fadeIn 2s linear;
-            animation-fill-mode: forwards;
-            overflow-wrap: break-word;
-        }
-        p {
-            margin-top: 2vw;
-            font-size: 0.7rem;
         }
     }
     // adds basic layout and styling for all the info text
     .infoTags{
         position: absolute;
-        margin: 0;
-        font-size: clamp(0.8rem, 1.5vw, 1.5rem);
-        max-width: 10vw;
-        padding: 3vw 2vw;
-        background: rgb(30, 154, 228, 0.5); 
+        margin: 0;      
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 3rem;
 
-        &.plasticBag{
-            opacity: 0;
-            right: 5vw;
-            bottom: 15vw;
-            max-width: 10vw;
+        &.shoppingNet{
+            top: 3vw;
+            width: 20vw;
+            left: 2vw;
             z-index: 1;
-            animation: fadeIn 10s linear;
-            animation-delay: 4s;
-            animation-fill-mode: forwards;
-            word-wrap: break-word;
+            font-size: 2rem;
         }
 
         &.goal14{
           opacity: 0;
-            font-size: 1rem;
+            font-size: 2rem;
 
             &.fact1{
-              bottom: 12vw;
-              right: 10vw;
+              top: 10vw;
+              left: 10vw;
+              font-size: 2.5rem;
               animation: fadeIn 2s linear;
               animation-fill-mode: forwards;
-              animation-delay: 8s;
+              animation-delay: 2s;
             }
             &.fact2{
               top: 5vw;
-              right: 13vw;
+              left: 10vw;
               animation: fadeIn 2s linear;
               animation-fill-mode: forwards;
-              animation-delay: 4s;
+              animation-delay: 1s;
             }
             &.fact3{
-              top: 5vw;
-              left: 50vw;
+              top: 15vw;
+              left: 10vw;
               animation: fadeIn 2s linear;
               animation-fill-mode: forwards;
               animation-delay: 2s; 
             }
             &.fact4{
-              top: 5vw;
-              left: 30vw;
-              animation: fadeIn 2s linear;
+              top: 10vw;
+              left: 10vw;
+              opacity: 0;
+              animation: fadeIn 4s linear;
               animation-fill-mode: forwards;
+              font-size: 2.5rem;
             }
 
             &.fact5{
               top: 5vw;
-              right: 10vw;
-              animation-delay: 2s; 
-              max-width: 20vw;
-              word-wrap: break-word;
+              left: 10vw; 
+              width: 50vw;
               animation: fadeIn 2s linear;
               animation-fill-mode: forwards;
+              animation-delay: 2s;
             }
 
             &.nr1{
-                font-size: 1.2rem;
-                padding: 3vw 10vw;
-                padding-left: 3vw;
-                left: 2vw;
-                top: 1vw;      
+                left: 15vw;    
                 animation: fadeIn 2s linear;
                 animation-fill-mode: forwards;
             }
             &.nr2{
-                padding-top: 1vw;
-                padding-bottom: 1vw;
+                padding-bottom: 10px;
                 left: 2vw;
-                bottom: 2vw;
+                bottom: 0;
                 animation: fadeIn 2s linear;
                 animation-fill-mode: forwards;
-                animation-delay: 4s;
-                max-width: 15vw;
+                animation-delay: 8s;
+                font-size: 3rem;
             }
             &.nr3{
-                top: 1vw;
-                right: 2vw;
+                top: 5vw;
+                left: 15vw;
                 word-wrap: break-word;
                 animation: fadeIn 2s linear;
                 animation-fill-mode: forwards;
                 animation-delay: 2s;
             }
+
+            &.threeTings{
+                opacity: 0;
+                top: 15vw;
+                left: 2vw;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 5s;
+            }
+
+            &.preventSeaLevel{
+                opacity: 0;
+                top: 35vw;
+                left: 2vw;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 7s;
+            }
         }
+
+        &.list{
+            top: 20vw;
+            left: 20vw;
+            li{
+                opacity: 0;
+                list-style-type: none;
+                font-size: 2.5rem;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 6s;
+            }
+        }
+
+        &.learnMore{
+            right: 2vw;
+            top: 10vw;
+            font-size: 2rem;
+            opacity: 0;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 6s;
+        }
+
     }
 
     .UNgoal14{
@@ -242,14 +280,52 @@ section {
           animation-duration: 40s;
       }
   }
-      // makes Carlos walk
+      // makes the guy walk
       .guy {
           animation: walkDistance 8s forwards linear;
           transform: scaleX(-1);
       }
 
-      // nest for all the SVGs
-    .svg{
+
+
+    // Nest for the PNG's
+    .png{
+        
+        &__unGoal14{
+            position: absolute;
+            opacity: 0.4;
+            width: 15vw;
+            border-radius: 15% 25%;
+            left: 2%;
+
+            &--blue{
+                position: absolute;
+                top: 20vw;
+                right: 5vw;
+                width: 10vw;
+                border-radius: 25%;
+                opacity: 0;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 6s;
+            }
+        }
+
+        &__svanemerket{
+            position: absolute;
+            bottom: 5vw;
+            right: 5vw;
+            width: 10vw;
+            border-radius: 50%;
+            opacity: 0;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 6s;
+        }
+    }
+
+    //Nest for all the SVGs
+      .svg{
       &__factory{
         position: absolute;
         width: 33vw;
@@ -263,8 +339,7 @@ section {
         bottom: 4vw;
         right: 21vw;
         animation: plasticThrow 5s ease-in-out;
-         animation-delay: 8s;
-
+        animation-delay: 8s;
       }
 
         &__town{
@@ -275,41 +350,12 @@ section {
             &-1 {
                 left: 0vw;
             }
-
             &-2 {
                 left: 16vw;
             }
-
             &-3{
                 left: 32vw;
             }
-        }
-
-        &__bottle{
-          position: absolute;
-          right: 20%;
-          bottom: 7vw;
-          width: 2vw;
-          animation: floatingBottle 8s linear infinite;
-          opacity: 0.5;
-
-          &--two{
-            position: absolute;
-            left: 10%;
-            bottom: 6vw;
-            width: 2vw;
-            animation: floatingCan 6s linear infinite;
-            opacity: 0.6;
-          }
-        }
-
-        &__soda{
-          position: absolute;
-          left: 30%;
-          bottom: 7vw;
-          width: 2vw;
-          animation: floatingCan 5s linear infinite;
-          opacity: 0.8;
         }
         
         &__jojamart {
@@ -319,12 +365,11 @@ section {
             width: 40vw;
         }
 
-        &__carlos {
+        &__shopper {
             position: absolute;
             right: 9.6vw;
             bottom: 0;
-            width: 4vw;
-            
+            width: 4vw;  
         }
 
         &__jojadoor {
@@ -348,18 +393,49 @@ section {
             width: 5vw;
         }
 
+    // Added a crusor: pointer to the seagull so it is clearer that it is interactive
         &__storegull {
             position: absolute;
-            top: 5vw;
-            left: 45vw;
+            top: 32%;
+            left: 35vw;
             width: 10vw;
+            cursor: pointer;
             
             &:hover {
-                animation: spin 0.4s linear infinite;
+                animation: spin 0.8s linear infinite;
             }
         }
 
-        &__jojabag {
+        &__plasticTower{
+            position: absolute;
+            width: 30vw;
+
+            &-one{
+                top: 20vw;
+                left: 35vw;
+            }
+            &-two{
+                top: 30vw;
+                right: 20vw;
+            }
+            &-three{
+                top: 25vw;
+                left: 20vw;
+            }
+            &-four{
+                top: 30vw;
+                left: 25vw;
+            }
+        }
+
+        &__plasticBagTower{
+            width: 20vw;
+            position: absolute;
+            top: 35vw;
+            left: 16vw;
+        }
+
+        &__jojabag{
 
           &--boat{
             position: absolute;
@@ -376,7 +452,22 @@ section {
           animation: driveDistance 8s linear;
           animation-fill-mode: forwards;
           right: -30vw;
-      }
+        }
+
+        &__plasticTowerBoat{
+            &--left{
+                position: absolute;
+                width: 20vw;
+                bottom: 20%;
+                left: 15%;
+            }
+            &--right{
+                position: absolute;
+                width: 20vw;
+                bottom: 18%;
+                right: 15%;
+            }
+        }
 
         &__trench{
             position: absolute;
@@ -401,7 +492,7 @@ section {
             position: absolute;
             width: 20vw;
             bottom: 10vw;
-            right: 15vw;
+            right: 20vw;
             animation: swimDistance 8s linear;
             animation-fill-mode: forwards;
             animation-delay: 5s;
@@ -409,9 +500,10 @@ section {
 
           &__bottomPlasticBag{
             position: absolute;
+            opacity: 0.2;
             width: 30vw;
             bottom:15vw;
-            left: 30vw;
+            left: 35vw;
             animation: floatingBottle 8s linear infinite;
           }
 
@@ -432,6 +524,7 @@ section {
               width: 100%;
               bottom: 0;
               left: 0;
+              opacity: 0.9;
             } 
          }
          &__boat{
