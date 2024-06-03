@@ -128,12 +128,24 @@ body .section-container {
 }
 body section {
   opacity: 0;
-  height: 100vh;
+  height: 90vh;
   transition: 120ms;
   position: relative;
 }
 body section.show {
   opacity: 1;
+}
+body #upToTop {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  bottom: 1vw;
+  left: 40vw;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
 }
 body #heading {
   height: 80vh;
@@ -148,43 +160,31 @@ body #heading h1 {
   letter-spacing: 0.5vw;
   text-shadow: 10px 10px 20px rgb(22, 22, 129);
   margin-bottom: 0;
-  animation: fadeIn 2s linear;
-  animation-fill-mode: forwards;
-  overflow-wrap: break-word;
 }
 body .infoTags {
   position: absolute;
   margin: 0;
-  padding: 3vw 2vw;
   font-weight: bold;
   font-size: 3rem;
 }
 body .infoTags.shoppingNet {
-  top: 0;
+  top: 3vw;
   width: 20vw;
-  right: 10vw;
+  left: 2vw;
   z-index: 1;
-}
-body .infoTags.plasticBag {
-  opacity: 0;
-  bottom: 15vw;
-  max-width: 20vw;
-  z-index: 1;
-  animation: fadeIn 10s linear;
-  animation-delay: 4s;
-  animation-fill-mode: forwards;
-  word-wrap: break-word;
+  font-size: 2rem;
 }
 body .infoTags.goal14 {
   opacity: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 body .infoTags.goal14.fact1 {
-  bottom: 12vw;
-  right: 10vw;
+  top: 10vw;
+  left: 10vw;
+  font-size: 2.5rem;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 8s;
+  animation-delay: 2s;
 }
 body .infoTags.goal14.fact2 {
   top: 5vw;
@@ -201,11 +201,12 @@ body .infoTags.goal14.fact3 {
   animation-delay: 2s;
 }
 body .infoTags.goal14.fact4 {
-  top: 5vw;
+  top: 10vw;
   left: 10vw;
   opacity: 0;
   animation: fadeIn 4s linear;
   animation-fill-mode: forwards;
+  font-size: 2.5rem;
 }
 body .infoTags.goal14.fact5 {
   top: 5vw;
@@ -221,11 +222,13 @@ body .infoTags.goal14.nr1 {
   animation-fill-mode: forwards;
 }
 body .infoTags.goal14.nr2 {
+  padding-bottom: 10px;
   left: 2vw;
-  bottom: 10vw;
+  bottom: 0;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 7s;
+  animation-delay: 8s;
+  font-size: 3rem;
 }
 body .infoTags.goal14.nr3 {
   top: 5vw;
@@ -235,13 +238,21 @@ body .infoTags.goal14.nr3 {
   animation-fill-mode: forwards;
   animation-delay: 2s;
 }
-body .infoTags.threeTings {
+body .infoTags.goal14.threeTings {
   opacity: 0;
   top: 15vw;
   left: 2vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
   animation-delay: 5s;
+}
+body .infoTags.goal14.preventSeaLevel {
+  opacity: 0;
+  top: 35vw;
+  left: 2vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
 }
 body .infoTags.list {
   top: 20vw;
@@ -255,13 +266,14 @@ body .infoTags.list li {
   animation-fill-mode: forwards;
   animation-delay: 6s;
 }
-body .infoTags.preventSeaLevel {
+body .infoTags.learnMore {
+  right: 2vw;
+  top: 10vw;
+  font-size: 2rem;
   opacity: 0;
-  bottom: 0;
-  left: 2vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 8s;
+  animation-delay: 6s;
 }
 body .UNgoal14 {
   position: absolute;
@@ -355,6 +367,28 @@ body .png__unGoal14 {
   width: 15vw;
   border-radius: 15% 25%;
   left: 2%;
+}
+body .png__unGoal14--blue {
+  position: absolute;
+  top: 20vw;
+  right: 5vw;
+  width: 10vw;
+  border-radius: 25%;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+}
+body .png__svanemerket {
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+  width: 10vw;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
 }
 body .svg__factory {
   position: absolute;
@@ -496,7 +530,7 @@ body .svg__anglerFish {
   position: absolute;
   width: 20vw;
   bottom: 10vw;
-  right: 15vw;
+  right: 20vw;
   animation: swimDistance 8s linear;
   animation-fill-mode: forwards;
   animation-delay: 5s;
@@ -506,7 +540,7 @@ body .svg__bottomPlasticBag {
   opacity: 0.2;
   width: 30vw;
   bottom: 15vw;
-  left: 30vw;
+  left: 35vw;
   animation: floatingBottle 8s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {

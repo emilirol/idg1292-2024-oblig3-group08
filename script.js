@@ -8,7 +8,7 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("show", entry.isIntersecting);
         // creating a variable to select the unique elements with an ID, or class depending on whether they're used once or more
-        const els2animate = entry.target.querySelectorAll("#guy, #doorSlide, #carMove, #trashBag, #anglerMove, .trenchMove, #anglerText, .infoTags");
+        const els2animate = entry.target.querySelectorAll("#guy, #doorSlide, #carMove, #trashBag, #anglerMove, .trenchMove, .infoTags");
         els2animate.forEach(el=>{
             // retrieves the class stored in the animation-name attribute allowing the code to add unique classes (animations) for different elements
             const animationClassName = el.getAttribute("animation-name");

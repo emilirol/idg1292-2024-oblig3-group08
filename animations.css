@@ -1,3 +1,19 @@
+@keyframes floatingCan {
+  0%, 100% {
+    transform: translateY(50%) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-40deg);
+  }
+}
+@keyframes floatingBottle {
+  0%, 100% {
+    transform: translateY(60%) rotate(20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(30deg);
+  }
+}
 @keyframes bobbing {
   0%, 100% {
     transform: translateY(0) rotate(0deg);
