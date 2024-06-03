@@ -56,19 +56,22 @@ section {
     // adds basic layout and styling for all the info text
     .infoTags{
         position: absolute;
-        margin: 0;
-        font-size: clamp(0.8rem, 1.5vw, 1.5rem);
-        max-width: 10vw;
+        margin: 0;      
         padding: 3vw 2vw;
-        background: rgb(30, 154, 228, 0.5); 
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 3rem;
+
+        &.shoppingNet{
+            top: 0;
+            width: 20vw;
+            right: 10vw;
+            z-index: 1;
+        }
 
         &.plasticBag{
             opacity: 0;
-            right: 5vw;
             bottom: 15vw;
-            max-width: 10vw;
+            max-width: 20vw;
             z-index: 1;
             animation: fadeIn 10s linear;
             animation-delay: 4s;
@@ -78,7 +81,7 @@ section {
 
         &.goal14{
           opacity: 0;
-            font-size: 1rem;
+            font-size: 2.5rem;
 
             &.fact1{
               bottom: 12vw;
@@ -89,22 +92,22 @@ section {
             }
             &.fact2{
               top: 5vw;
-              right: 13vw;
+              left: 10vw;
               animation: fadeIn 2s linear;
               animation-fill-mode: forwards;
-              animation-delay: 4s;
+              animation-delay: 2s;
             }
             &.fact3{
-              top: 5vw;
-              left: 50vw;
+              top: 15vw;
+              left: 10vw;
               animation: fadeIn 2s linear;
               animation-fill-mode: forwards;
-              animation-delay: 2s; 
+              animation-delay: 4s; 
             }
             &.fact4{
               top: 5vw;
-              left: 30vw;
-              animation: fadeIn 2s linear;
+              opacity: 0;
+              animation: fadeIn 4s linear;
               animation-fill-mode: forwards;
             }
 
@@ -119,7 +122,6 @@ section {
             }
 
             &.nr1{
-                font-size: 1.2rem;
                 padding: 3vw 10vw;
                 padding-left: 3vw;
                 left: 2vw;
@@ -145,6 +147,38 @@ section {
                 animation-fill-mode: forwards;
                 animation-delay: 2s;
             }
+        }
+
+        &.threeTings{
+            opacity: 0;
+            width: 35vw;
+            top: 20vw;
+            left: 20vw;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 5s;
+        }
+
+        &.list{
+            top: 25vw;
+            left: 20vw;
+            li{
+                opacity: 0;
+                list-style-type: none;
+                font-size: 2.5rem;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 6s;
+            }
+        }
+
+        &.preventSeaLevel{
+            opacity: 0;
+            top: 30vw;
+            left: 20vw;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 7s;
         }
     }
 
@@ -239,14 +273,28 @@ section {
           animation-duration: 40s;
       }
   }
-      // makes Carlos walk
+      // makes the guy walk
       .guy {
           animation: walkDistance 8s forwards linear;
           transform: scaleX(-1);
       }
 
-      // nest for all the SVGs
-    .svg{
+
+
+    // Nest for the PNG's
+    .png{
+        
+        &__unGoal14{
+            position: absolute;
+            opacity: 0.4;
+            width: 15vw;
+            border-radius: 15% 25%;
+            left: 2%;
+        }
+    }
+
+    //Nest for all the SVGs
+      .svg{
       &__factory{
         position: absolute;
         width: 33vw;
@@ -321,7 +369,7 @@ section {
     // Added a crusor: pointer to the seagull so it is clearer that it is interactive
         &__storegull {
             position: absolute;
-            top: 35vw;
+            top: 32%;
             left: 35vw;
             width: 10vw;
             cursor: pointer;
@@ -353,7 +401,7 @@ section {
             }
         }
 
-        &__plasticBag{
+        &__plasticBagTower{
             width: 20vw;
             position: absolute;
             top: 35vw;
@@ -377,7 +425,33 @@ section {
           animation: driveDistance 8s linear;
           animation-fill-mode: forwards;
           right: -30vw;
-      }
+        }
+
+        &__plasticBagFactory{
+            position: absolute;
+            width: 15vw;
+            top: 15vw;
+            left: 3vw;
+            opacity: 0;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+        }
+
+        &__plasticTowerBoat{
+            &--left{
+                position: absolute;
+                width: 20vw;
+                top: 35vw;
+                left: 15vw;
+            }
+            &--right{
+                position: absolute;
+                width: 20vw;
+                top: 35vw;
+                right: 15vw;
+            }
+        }
 
         &__trench{
             position: absolute;
@@ -410,6 +484,7 @@ section {
 
           &__bottomPlasticBag{
             position: absolute;
+            opacity: 0.2;
             width: 30vw;
             bottom:15vw;
             left: 30vw;
@@ -433,6 +508,7 @@ section {
               width: 100%;
               bottom: 0;
               left: 0;
+              opacity: 0.9;
             } 
          }
          &__boat{
