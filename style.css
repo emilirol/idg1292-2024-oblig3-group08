@@ -191,51 +191,45 @@ body .infoTags.goal14.fact2 {
   left: 10vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 body .infoTags.goal14.fact3 {
   top: 15vw;
   left: 10vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 body .infoTags.goal14.fact4 {
   top: 5vw;
+  left: 10vw;
   opacity: 0;
   animation: fadeIn 4s linear;
   animation-fill-mode: forwards;
 }
 body .infoTags.goal14.fact5 {
   top: 5vw;
-  right: 10vw;
-  animation-delay: 2s;
-  max-width: 20vw;
-  word-wrap: break-word;
+  left: 10vw;
+  width: 50vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 body .infoTags.goal14.nr1 {
-  padding: 3vw 10vw;
-  padding-left: 3vw;
-  left: 2vw;
-  top: 1vw;
+  left: 15vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
 }
 body .infoTags.goal14.nr2 {
-  padding-top: 1vw;
-  padding-bottom: 1vw;
   left: 2vw;
-  bottom: 2vw;
+  bottom: 10vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 4s;
-  max-width: 15vw;
+  animation-delay: 7s;
 }
 body .infoTags.goal14.nr3 {
-  top: 1vw;
-  right: 2vw;
+  top: 5vw;
+  left: 15vw;
   word-wrap: break-word;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
@@ -243,15 +237,14 @@ body .infoTags.goal14.nr3 {
 }
 body .infoTags.threeTings {
   opacity: 0;
-  width: 35vw;
-  top: 20vw;
-  left: 20vw;
+  top: 15vw;
+  left: 2vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
 body .infoTags.list {
-  top: 25vw;
+  top: 20vw;
   left: 20vw;
 }
 body .infoTags.list li {
@@ -264,11 +257,11 @@ body .infoTags.list li {
 }
 body .infoTags.preventSeaLevel {
   opacity: 0;
-  top: 30vw;
-  left: 20vw;
+  bottom: 0;
+  left: 2vw;
   animation: fadeIn 2s linear;
   animation-fill-mode: forwards;
-  animation-delay: 7s;
+  animation-delay: 8s;
 }
 body .UNgoal14 {
   position: absolute;
@@ -472,27 +465,17 @@ body .svg__truck {
   animation-fill-mode: forwards;
   right: -30vw;
 }
-body .svg__plasticBagFactory {
-  position: absolute;
-  width: 15vw;
-  top: 15vw;
-  left: 3vw;
-  opacity: 0;
-  animation: fadeIn 2s linear;
-  animation-fill-mode: forwards;
-  animation-delay: 4s;
-}
 body .svg__plasticTowerBoat--left {
   position: absolute;
   width: 20vw;
-  top: 35vw;
-  left: 15vw;
+  bottom: 20%;
+  left: 15%;
 }
 body .svg__plasticTowerBoat--right {
   position: absolute;
   width: 20vw;
-  top: 35vw;
-  right: 15vw;
+  bottom: 18%;
+  right: 15%;
 }
 body .svg__trench {
   position: absolute;
